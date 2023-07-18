@@ -140,7 +140,7 @@ img {
   align-items: center;
   justify-content: space-between;
   padding-top: 0;
-  padding-right: -5px;
+  padding-right: 20px;
   padding-bottom: 40px;
   padding-left: 20px;
 }
@@ -148,6 +148,9 @@ img {
   width: 450px;
   height: 560px;
   margin-right: 25px;
+}
+.slider-wrapper__image3 {
+  margin-right: 0;
 }
 .slider-pagination {
   display: flex;
