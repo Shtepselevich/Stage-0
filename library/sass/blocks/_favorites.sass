@@ -30,6 +30,7 @@
             margin-bottom: 40px
             margin-left: 20px
     &-radio
+        margin-bottom: 40px
         &__input
             width: 0
             height: 0
@@ -71,3 +72,77 @@
                 transition: 0.2s ease-in
         &__input:checked+&__custom::before
             transform: translate(-50%, -50%) scale(1)
+    &-staffs
+        position: relative
+    &-book1
+        position: relative
+        padding-top: 15px
+        padding-left: 20px
+        padding-bottom: 0
+        width: 550px
+        height: 555px
+        border: 1px solid #000
+        background: #FFF
+        &__title
+            height: 40px
+            color: #000
+            font-family: Forum
+            font-size: 20px
+            font-style: normal
+            font-weight: 400
+            line-height: 40px
+            letter-spacing: 2px
+            text-transform: capitalize
+            margin-bottom: 20px
+            &::after
+                content: ""
+                display: block
+                width: 60px
+                padding-top: 0px
+                border-bottom: 1px solid #BB945F
+        &__bookname
+            color: #000
+            font-family: Inter
+            font-size: 15px
+            font-style: normal
+            font-weight: 700
+            line-height: 40px
+            letter-spacing: 2px
+            text-transform: capitalize
+            margin-bottom: 20px
+        &__lemma
+            margin-left: 0
+            width: 355px
+            height: 320px
+            color: #000
+            font-family: Inter
+            font-size: 15px
+            font-style: normal
+            font-weight: 400
+            line-height: 40px
+            letter-spacing: 2px
+            text-transform: capitalize
+            margin-bottom: 15px
+        &__button
+            margin-left: 0
+            border-radius: 2px
+            border: 1px solid #0C0C0E
+            padding: 9px 27px
+            background-color: #fff
+            color: #0C0C0E
+            text-align: center
+            font-family: Inter
+            font-size: 10px
+            font-style: normal
+            font-weight: 700
+            line-height: normal
+            letter-spacing: 1px
+            margin-bottom: 15px
+        &__image
+            display: block
+            position: relative
+            z-index: 2
+            top: 257px
+            left: 390px
+            right: -40px
+            bottom: 0
