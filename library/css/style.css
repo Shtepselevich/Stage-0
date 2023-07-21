@@ -275,19 +275,50 @@ img {
   transform: translate(-50%, -50%) scale(1);
 }
 .favorites-staffs {
-  position: relative;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding-left: 20px;
 }
 .favorites-book1 {
-  position: relative;
+  margin-left: 0;
+  margin-right: 260px;
+  margin-bottom: 40px;
+}
+.favorites-book2 {
+  margin-left: 0;
+  margin-bottom: 40px;
+}
+.favorites-book3 {
+  margin-left: 0;
+  margin-right: 260px;
+}
+.favorites-book4 {
+  margin-left: 0;
+}
+.favorites-book-wrapper {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: flex-start;
   padding-top: 15px;
   padding-left: 20px;
-  padding-bottom: 0;
+  padding-bottom: 15px;
   width: 550px;
   height: 555px;
-  border: 1px solid #000;
+  padding-bottom: 0;
+  outline: 1px solid #000;
+  outline-offset: -1px;
   background: #FFF;
 }
-.favorites-book1__title {
+.favorites-book-image {
+  display: none;
+  position: relative;
+  bottom: 300px;
+  left: 390px;
+}
+.favorites-book__title {
   height: 40px;
   color: #000;
   font-family: Forum;
@@ -298,15 +329,16 @@ img {
   letter-spacing: 2px;
   text-transform: capitalize;
   margin-bottom: 20px;
+  margin-left: 0;
 }
-.favorites-book1__title::after {
+.favorites-book__title::after {
   content: "";
   display: block;
   width: 60px;
   padding-top: 0px;
   border-bottom: 1px solid #BB945F;
 }
-.favorites-book1__bookname {
+.favorites-book__bookname {
   color: #000;
   font-family: Inter;
   font-size: 15px;
@@ -316,11 +348,11 @@ img {
   letter-spacing: 2px;
   text-transform: capitalize;
   margin-bottom: 20px;
+  margin-left: 0;
 }
-.favorites-book1__lemma {
+.favorites-book__lemma {
   margin-left: 0;
   width: 355px;
-  height: 320px;
   color: #000;
   font-family: Inter;
   font-size: 15px;
@@ -329,9 +361,9 @@ img {
   line-height: 40px;
   letter-spacing: 2px;
   text-transform: capitalize;
-  margin-bottom: 15px;
 }
-.favorites-book1__button {
+.favorites-book__button {
+  margin-top: auto;
   margin-left: 0;
   border-radius: 2px;
   border: 1px solid #0C0C0E;
@@ -346,13 +378,4 @@ img {
   line-height: normal;
   letter-spacing: 1px;
   margin-bottom: 15px;
-}
-.favorites-book1__image {
-  display: block;
-  position: relative;
-  z-index: 2;
-  top: 257px;
-  left: 390px;
-  right: -40px;
-  bottom: 0;
 }
