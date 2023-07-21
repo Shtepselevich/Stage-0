@@ -79,20 +79,27 @@
         flex-wrap: wrap
         padding-left: 20px
     &-book1
+        position: relative
         margin-left: 0
         margin-right: 260px
         margin-bottom: 40px
     &-book2
+        position: relative
         margin-left: 0
         margin-bottom: 40px
     &-book3
+        position: relative
         margin-left: 0
         margin-right: 260px
     &-book4
+        position: relative
         margin-left: 0
-
     &-book
-
+        &-image
+            position: absolute
+            top: 255px
+            left: 390px
+            right: -40px
         &-wrapper
             display: flex
             flex-direction: column
@@ -107,13 +114,6 @@
             outline: 1px solid #000
             outline-offset: -1px
             background: #FFF
-
-        &-image
-            display: none
-            position: relative
-            bottom: 300px
-            left: 390px
-
         &__title
             height: 40px
             color: #000

@@ -282,20 +282,30 @@ img {
   padding-left: 20px;
 }
 .favorites-book1 {
+  position: relative;
   margin-left: 0;
   margin-right: 260px;
   margin-bottom: 40px;
 }
 .favorites-book2 {
+  position: relative;
   margin-left: 0;
   margin-bottom: 40px;
 }
 .favorites-book3 {
+  position: relative;
   margin-left: 0;
   margin-right: 260px;
 }
 .favorites-book4 {
+  position: relative;
   margin-left: 0;
+}
+.favorites-book-image {
+  position: absolute;
+  top: 255px;
+  left: 390px;
+  right: -40px;
 }
 .favorites-book-wrapper {
   display: flex;
@@ -311,12 +321,6 @@ img {
   outline: 1px solid #000;
   outline-offset: -1px;
   background: #FFF;
-}
-.favorites-book-image {
-  display: none;
-  position: relative;
-  bottom: 300px;
-  left: 390px;
 }
 .favorites-book__title {
   height: 40px;
