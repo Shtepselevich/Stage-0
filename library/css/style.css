@@ -544,3 +544,9 @@ img {
   height: 414px;
   margin-right: 0;
 }
+
+.librarycard {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 20px 41px 20px;
+}
