@@ -420,9 +420,13 @@ img {
 }
 .menu-left {
   width: 438px;
+  margin-left: 0;
 }
 .menu-right {
-  width: 438px;
+  width: 482px;
+  margin-right: 0;
+  display: flex;
+  flex-direction: column;
 }
 .menu-title {
   color: #BB945F;
@@ -474,4 +478,19 @@ img {
   letter-spacing: 2px;
   text-transform: capitalize;
   margin-right: 0;
+}
+.menu-item__right {
+  margin-right: 0;
+  margin-top: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.menu-right__title {
+  text-align: right;
+  margin-right: 0;
+}
+.menu-right__item-title {
+  text-align: right;
+  width: 210px;
 }
