@@ -96,12 +96,7 @@ img {
   text-transform: uppercase;
 }
 
-.about {
-  display: flex;
-  flex-direction: column;
-  padding-top: 20px;
-}
-.about-title {
+.section-title {
   color: #0C0C0E;
   font-family: Forum;
   font-size: 40px;
@@ -111,6 +106,19 @@ img {
   letter-spacing: 2px;
   text-transform: capitalize;
   margin-bottom: 20px;
+}
+.section-line {
+  width: 50px;
+  height: 1px;
+  background-color: #0C0C0E;
+  border: none;
+  margin-bottom: 40px;
+}
+
+.about {
+  display: flex;
+  flex-direction: column;
+  padding-top: 20px;
 }
 .about-text {
   color: #000;
@@ -122,14 +130,6 @@ img {
   line-height: 40px;
   height: 40px;
   margin-bottom: 20px;
-}
-
-.title-line {
-  width: 50px;
-  height: 1px;
-  background-color: #0C0C0E;
-  border: none;
-  margin-bottom: 40px;
 }
 
 .slider {
@@ -195,18 +195,6 @@ img {
   flex-direction: column;
   padding-top: 20px;
   padding-bottom: 40px;
-}
-.favorites-title {
-  padding-top: 40px;
-  color: #0C0C0E;
-  font-family: Forum;
-  font-size: 40px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 40px;
-  letter-spacing: 2px;
-  text-transform: capitalize;
-  margin-bottom: 20px;
 }
 .favorites-header {
   display: flex;
@@ -382,23 +370,34 @@ img {
   line-height: normal;
   letter-spacing: 1px;
   margin-bottom: 15px;
+  cursor: pointer;
+}
+.favorites-book__button4 {
+  margin-top: auto;
+  margin-left: 0;
+  border-radius: 2px;
+  border: 1px solid #BB945F;
+  padding: 9px 27px;
+  background-color: #fff;
+  color: #BB945F;
+  text-align: center;
+  font-family: Inter;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 1px;
+  margin-bottom: 15px;
+}
+.favorites-book__button:hover {
+  background-color: #BB945F;
+  transition: background-color 0.3s ease;
 }
 
 .coffeshop {
   display: flex;
   flex-direction: column;
   padding: 20px 20px 40px 20px;
-}
-.coffeshop-title {
-  color: #0C0C0E;
-  font-family: Forum;
-  font-size: 40px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 40px;
-  letter-spacing: 2px;
-  text-transform: capitalize;
-  padding-bottom: 20px;
 }
 .coffeshop-info {
   color: #000;
@@ -493,4 +492,55 @@ img {
 .menu-right__item-title {
   text-align: right;
   width: 210px;
+}
+
+.contacts {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 20px 40px 20px;
+}
+.contacts-wrapper {
+  width: 1400px;
+  display: flex;
+  justify-content: space-between;
+}
+.contacts-left {
+  margin-left: 0;
+}
+.contacts-left__title {
+  text-align: left;
+  color: #000;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 40px;
+  letter-spacing: 2px;
+  text-transform: capitalize;
+}
+.contacts-left__title1 {
+  margin-bottom: 40px;
+  margin-top: 0;
+}
+.contacts-left__title2 {
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+.contacts-left__info {
+  text-align: left;
+  color: #000;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 40px;
+  letter-spacing: 2px;
+  text-transform: capitalize;
+  margin-bottom: 20px;
+}
+.contacts-map {
+  display: block;
+  width: 696px;
+  height: 414px;
+  margin-right: 0;
 }
