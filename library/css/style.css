@@ -545,10 +545,28 @@ img {
   margin-right: 0;
 }
 
+.checkcard-getcard__wrapper {
+  width: 1400px;
+  display: flex;
+  justify-content: space-between;
+}
+
 .librarycard {
   display: flex;
   flex-direction: column;
   padding: 20px 20px 41px 20px;
+}
+.librarycard-checkcard {
+  padding: 20px 20px 30px 20px;
+  width: 600px;
+  height: 386px;
+  outline: 3px solid #BB945F;
+  outline-offset: -3px;
+  background: #FFF;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+.librarycard-checkcard__wrapper {
+  margin-left: 0px;
 }
 .librarycard-checkcard__title {
   text-align: center;
@@ -561,16 +579,7 @@ img {
   letter-spacing: 0.6px;
   margin-bottom: 30px;
 }
-.librarycard-checkcard {
-  padding: 20px 20px 30px 20px;
-  width: 600px;
-  height: 386px;
-  outline: 3px solid #BB945F;
-  outline-offset: -3px;
-  background: #FFF;
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-}
-.librarycard-checkcard__wrapper {
+.librarycard-checkcard__formwrapper {
   padding: 20px 20px 25px 20px;
   background-color: #BB945F;
   width: 560px;
@@ -615,6 +624,57 @@ img {
   text-align: center;
   font-family: Inter;
   font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 1px;
+}
+.librarycard-getcard {
+  margin-right: 0;
+}
+.librarycard-getcard__title {
+  color: #000;
+  text-align: right;
+  font-family: Forum;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.6px;
+}
+.librarycard-getcard__text {
+  margin-top: 35px;
+  margin-bottom: 35px;
+  color: #000;
+  text-align: right;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 40px;
+  letter-spacing: 0.4px;
+}
+.librarycard-getcard__button-wrapper {
+  display: flex;
+  justify-content: end;
+}
+.librarycard-getcard__button {
+  margin-right: 0;
+  margin-left: 20px;
+  display: flex;
+  width: 75px;
+  height: 30px;
+  padding: 10px 0px;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  border-radius: 2px;
+  border: 1px solid #0C0C0E;
+  background-color: #fff;
+  color: #0C0C0E;
+  text-align: center;
+  font-family: Inter;
+  font-size: 10px;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
