@@ -561,7 +561,7 @@ img {
   letter-spacing: 0.6px;
   margin-bottom: 30px;
 }
-.librarycard-getcard {
+.librarycard-checkcard {
   padding: 20px 20px 30px 20px;
   width: 600px;
   height: 386px;
@@ -570,14 +570,14 @@ img {
   background: #FFF;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
-.librarycard-getcard__wrapper {
+.librarycard-checkcard__wrapper {
   padding: 20px 20px 25px 20px;
   background-color: #BB945F;
   width: 560px;
   height: 272px;
   margin-bottom: 20px;
 }
-.librarycard-getcard__title {
+.librarycard-checkcard__cardtitle {
   color: #000;
   font-family: Forum;
   font-size: 30px;
@@ -587,7 +587,7 @@ img {
   letter-spacing: 0.6px;
   margin-bottom: 20px;
 }
-.librarycard-getcard__input {
+.librarycard-checkcard__input {
   margin-bottom: 25px;
   padding-left: 20px;
   display: block;
@@ -605,7 +605,7 @@ img {
   line-height: 50px;
   letter-spacing: 0.6px;
 }
-.librarycard-getcard__button {
+.librarycard-checkcard__button {
   padding: 9px 39px;
   display: block;
   background-color: #fff;
