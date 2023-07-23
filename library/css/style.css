@@ -551,6 +551,7 @@ img {
   padding: 20px 20px 41px 20px;
 }
 .librarycard-checkcard__title {
+  text-align: center;
   color: #000;
   font-family: Inter;
   font-size: 30px;
@@ -596,8 +597,6 @@ img {
   border-radius: 10px;
   background: #FFF;
   border: none;
-}
-.librarycard-getcard__input::placeholder {
   color: #8E8E8E;
   font-family: Forum;
   font-size: 30px;
@@ -605,9 +604,6 @@ img {
   font-weight: 400;
   line-height: 50px;
   letter-spacing: 0.6px;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
 }
 .librarycard-getcard__button {
   padding: 9px 39px;
