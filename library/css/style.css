@@ -712,6 +712,9 @@ img {
   height: 24px;
   margin-right: 11px;
 }
+.footer-left__icon-ul li {
+  display: inline-block;
+}
 .footer-right {
   margin-right: 0;
 }
