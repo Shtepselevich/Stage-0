@@ -15,6 +15,10 @@ img {
   max-width: 100%;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .header {
   background-color: #0C0C0E;
   height: 90px;
@@ -294,7 +298,7 @@ img {
 }
 .favorites-book-image {
   position: absolute;
-  top: 255px;
+  top: 256px;
   left: 390px;
   right: -40px;
 }
@@ -544,6 +548,29 @@ img {
   text-transform: capitalize;
   margin-bottom: 20px;
 }
+.contacts-left__tel {
+  text-decoration: none;
+  color: #000;
+  text-align: center;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 40px;
+  letter-spacing: 2px;
+  text-transform: capitalize;
+}
+.contacts-left__name {
+  text-decoration: none;
+  color: #000;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 40px;
+  letter-spacing: 2px;
+  text-transform: capitalize;
+}
 .contacts-map {
   display: block;
   width: 696px;
@@ -635,6 +662,11 @@ img {
   font-weight: 700;
   line-height: normal;
   letter-spacing: 1px;
+  cursor: pointer;
+}
+.librarycard-checkcard__button:hover {
+  background-color: #BB945F;
+  transition: background-color 0.3s ease;
 }
 .librarycard-getcard {
   margin-right: 0;
@@ -686,6 +718,12 @@ img {
   font-weight: 700;
   line-height: normal;
   letter-spacing: 1px;
+  cursor: pointer;
+}
+.librarycard-getcard__button:hover {
+  background-color: #BB945F;
+  transition: background-color 0.3s ease;
+  border: none;
 }
 
 .footer {
