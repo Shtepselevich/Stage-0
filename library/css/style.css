@@ -52,6 +52,9 @@ img {
 .navbar-menu__item {
   padding-right: 30px;
 }
+.navbar-menu__item a:hover {
+  color: #726a5f;
+}
 .navbar-menu__link {
   text-decoration: none;
   color: #FFF;
