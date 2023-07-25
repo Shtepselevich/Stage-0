@@ -376,6 +376,11 @@ img {
   margin-bottom: 15px;
   cursor: pointer;
 }
+.favorites-book__button:hover {
+  background-color: #BB945F;
+  transition: background-color 0.3s ease;
+  border: none;
+}
 .favorites-book__button4 {
   margin-top: auto;
   margin-left: 0;
@@ -393,10 +398,6 @@ img {
   line-height: normal;
   letter-spacing: 1px;
   margin-bottom: 15px;
-}
-.favorites-book__button:hover {
-  background-color: #BB945F;
-  transition: background-color 0.3s ease;
 }
 
 .coffeshop {
