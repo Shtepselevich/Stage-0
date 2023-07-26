@@ -298,7 +298,7 @@ html {
 }
 .favorites-book-image {
   position: absolute;
-  top: 256px;
+  top: 255px;
   left: 390px;
   right: -40px;
 }
