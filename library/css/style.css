@@ -269,6 +269,9 @@ html {
 .favorites-radio__input:checked + .favorites-radio__custom::before {
   transform: translate(-50%, -50%) scale(1);
 }
+.favorites-radio__label:has(.favorites-radio__input:checked) {
+  font-weight: 700;
+}
 .favorites-staffs {
   display: flex;
   align-items: flex-start;
