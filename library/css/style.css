@@ -272,7 +272,14 @@ html {
 .favorites-radio__label:has(.favorites-radio__input:checked) {
   font-weight: 700;
 }
-.favorites-staffs {
+.favorites-winter {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding-left: 20px;
+}
+.favorites-spring {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
