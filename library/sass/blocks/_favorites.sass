@@ -61,12 +61,36 @@
                 transition: 0.2s ease-in
         &__input:checked+&__custom::before
             transform: translate(-50%, -50%) scale(1)
-    &-staffs
+        &__label
+            &:has(.favorites-radio__input:checked)
+                font-weight: 700
+    &-winter
         display: flex
         align-items: flex-start
         justify-content: space-between
         flex-wrap: wrap
         padding-left: 20px
+    &-spring
+        display: flex
+        align-items: flex-start
+        justify-content: space-between
+        flex-wrap: wrap
+        padding-left: 20px
+        display: none
+    &-summer
+        display: flex
+        align-items: flex-start
+        justify-content: space-between
+        flex-wrap: wrap
+        padding-left: 20px
+        display: none
+    &-autumn
+        display: flex
+        align-items: flex-start
+        justify-content: space-between
+        flex-wrap: wrap
+        padding-left: 20px
+        display: none
     &-book1
         position: relative
         margin-left: 0
