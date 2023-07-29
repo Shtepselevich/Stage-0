@@ -285,6 +285,23 @@ html {
   justify-content: space-between;
   flex-wrap: wrap;
   padding-left: 20px;
+  display: none;
+}
+.favorites-summer {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding-left: 20px;
+  display: none;
+}
+.favorites-autumn {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding-left: 20px;
+  display: none;
 }
 .favorites-book1 {
   position: relative;
