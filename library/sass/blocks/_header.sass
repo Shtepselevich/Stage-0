@@ -30,6 +30,7 @@
             padding-right: 30px
         &__item a:hover
             color: #726a5f
+            transition: color 0.7s linear
         &__link
             text-decoration: none
             color: #FFF
@@ -41,3 +42,10 @@
     &-icon
         padding-left: 10px
         padding-right: 20px
+        & img
+            transition: transform 0.6s ease
+        &:hover
+            opacity: 0.3
+            transition: opacity 0.6s linear
+        &:hover img
+            transform: scale(1.2)

@@ -17,10 +17,20 @@
             font-weight: 400
             line-height: 20px
             margin-bottom: 18px
+            &:hover
+                color: #BB945F
+                transition: color 0.7s linear
         &__icon
             width: 24px
             height: 24px
             margin-right: 11px
+            &-link img
+                transition: transform 0.6s ease
+            &-link:hover
+                opacity: 0.5
+                transition: opacity 0.6s linear
+            &-link:hover img
+                transform: scale(1.2)
             &-ul li
                 display: inline-block
     &-right
@@ -67,6 +77,9 @@
             font-weight: 400
             line-height: 20px
             letter-spacing: 2px
+            &:hover
+                color: #BB945F
+                transition: color 0.7s linear
         &__username
             margin-right: 0
             text-decoration: none
@@ -78,3 +91,6 @@
             font-weight: 400
             line-height: 40px
             letter-spacing: 2px
+            &:hover
+                color: #BB945F
+                transition: color 0.7s linear
