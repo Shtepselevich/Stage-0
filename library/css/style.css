@@ -58,6 +58,7 @@ html {
 }
 .navbar-menu__item a:hover {
   color: #726a5f;
+  transition: color 0.7s linear;
 }
 .navbar-menu__link {
   text-decoration: none;
@@ -71,6 +72,16 @@ html {
 .navbar-icon {
   padding-left: 10px;
   padding-right: 20px;
+}
+.navbar-icon img {
+  transition: transform 0.6s ease;
+}
+.navbar-icon:hover {
+  opacity: 0.3;
+  transition: opacity 0.6s linear;
+}
+.navbar-icon:hover img {
+  transform: scale(1.2);
 }
 
 .welcome {
@@ -409,7 +420,7 @@ html {
 }
 .favorites-book__button:hover {
   background-color: #BB945F;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.5s ease;
   border: none;
 }
 .favorites-book__button4 {
@@ -693,7 +704,7 @@ html {
 }
 .librarycard-checkcard__button:hover {
   background-color: #BB945F;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.5s ease;
 }
 .librarycard-getcard {
   margin-right: 0;
@@ -749,7 +760,7 @@ html {
 }
 .librarycard-getcard__button:hover {
   background-color: #BB945F;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.5s ease;
   border: none;
 }
 
