@@ -83,6 +83,9 @@ html {
 .navbar-icon:hover img {
   transform: scale(1.2);
 }
+.navbar-burger {
+  display: none;
+}
 
 .welcome {
   background-image: url(../image/welcome-background.png);
@@ -882,4 +885,23 @@ html {
 .footer-bot__username:hover {
   color: #BB945F;
   transition: color 0.7s linear;
+}
+
+@media (max-width: 1024px) {
+  body {
+    width: 768px;
+  }
+  .navbar-menu {
+    display: none;
+  }
+  .navbar-burger {
+    display: block;
+    margin-right: 20px;
+    margin-left: 20px;
+  }
+  .welcome {
+    background-image: url(../image/welcome-background768.png);
+    max-width: 768px;
+    height: 600px;
+  }
 }
