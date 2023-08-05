@@ -89,7 +89,7 @@ html {
 
 .welcome {
   background-image: url(../image/welcome-background.png);
-  width: 1440px;
+  max-width: 1440px;
   height: 600px;
   display: flex;
   align-items: center;
@@ -467,7 +467,7 @@ html {
 }
 
 .menu {
-  width: 1400px;
+  max-width: 1400px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -555,7 +555,7 @@ html {
   padding: 20px 20px 40px 20px;
 }
 .contacts-wrapper {
-  width: 1400px;
+  max-width: 1400px;
   display: flex;
   justify-content: space-between;
 }
@@ -624,7 +624,7 @@ html {
 }
 
 .checkcard-getcard__wrapper {
-  width: 1400px;
+  max-width: 1400px;
   display: flex;
   justify-content: space-between;
 }
@@ -831,7 +831,7 @@ html {
   margin-bottom: 10px;
 }
 .footer-hr {
-  width: 1400px;
+  max-width: 1400px;
   height: 1px;
   background-color: #fff;
   border: none;
@@ -896,5 +896,41 @@ html {
   }
   .slider-pagination__button3 {
     display: none;
+  }
+  .favorites-winter {
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .favorites-book1 {
+    margin-right: 0;
+  }
+  .favorites-book2 {
+    margin-right: 0;
+  }
+  .favorites-book3 {
+    margin-right: 0;
+    margin-bottom: 40px;
+  }
+  .favorites-book4 {
+    margin-right: 0;
+  }
+  .contacts-wrapper {
+    flex-direction: column;
+  }
+  .contacts-left {
+    margin-bottom: 20px;
+  }
+  .checkcard-getcard__wrapper {
+    flex-direction: column;
+  }
+  .librarycard-checkcard__wrapper {
+    margin-bottom: 20px;
+  }
+  .footer-bot__year {
+    margin-right: auto;
+  }
+  .footer-bot__rs {
+    margin: auto;
   }
 }
