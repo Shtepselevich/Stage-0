@@ -8,7 +8,7 @@
 }
 
 body {
-  width: 1440px;
+  max-width: 1440px;
 }
 
 img {
@@ -887,21 +887,14 @@ html {
   transition: color 0.7s linear;
 }
 
-@media (max-width: 1024px) {
-  body {
-    width: 768px;
+@media (max-width: 1439px) {
+  .slider-wrapper__image2 {
+    margin-right: 0;
   }
-  .navbar-menu {
+  .slider-wrapper__image3 {
+    display: none !important;
+  }
+  .slider-pagination__button3 {
     display: none;
-  }
-  .navbar-burger {
-    display: block;
-    margin-right: 20px;
-    margin-left: 20px;
-  }
-  .welcome {
-    background-image: url(../image/welcome-background768.png);
-    max-width: 768px;
-    height: 600px;
   }
 }
