@@ -153,11 +153,9 @@ html {
   margin-bottom: 20px;
 }
 
-.slider {
-  display: flex;
-  flex-direction: column;
-}
 .slider-wrapper {
+  max-width: 1440px;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -468,6 +466,7 @@ html {
 
 .menu {
   max-width: 1400px;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -556,6 +555,7 @@ html {
 }
 .contacts-wrapper {
   max-width: 1400px;
+  width: 100%;
   display: flex;
   justify-content: space-between;
 }
@@ -625,6 +625,7 @@ html {
 
 .checkcard-getcard__wrapper {
   max-width: 1400px;
+  width: 100%;
   display: flex;
   justify-content: space-between;
 }
@@ -888,14 +889,30 @@ html {
 }
 
 @media (max-width: 1439px) {
+  .slider-wrapper {
+    justify-content: center;
+  }
+  .slider-wrapper__image1 {
+    margin-right: 20px;
+  }
   .slider-wrapper__image2 {
-    margin-right: 0;
+    margin-left: 20px;
+    margin-right: auto;
   }
   .slider-wrapper__image3 {
-    display: none !important;
+    display: none;
   }
   .slider-pagination__button3 {
     display: none;
+  }
+  .favorites-radio {
+    margin-left: 50px;
+  }
+  .favorites-header {
+    margin: auto;
+  }
+  .favorites-header__title {
+    margin-left: auto;
   }
   .favorites-winter {
     align-items: center;
@@ -929,6 +946,8 @@ html {
   }
   .footer-bot__year {
     margin-right: auto;
+    width: 159px;
+    text-align: left;
   }
   .footer-bot__rs {
     margin: auto;
