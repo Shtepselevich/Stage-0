@@ -233,11 +233,14 @@ html {
   font-style: normal;
   font-weight: 700;
   line-height: normal;
-  margin-bottom: 40px;
+  margin-bottom: 29px;
   margin-left: 20px;
 }
 .favorites-radio {
-  margin-bottom: 40px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 31px;
+  width: 775px;
 }
 .favorites-radio__input {
   width: 0;
@@ -253,9 +256,9 @@ html {
   font-style: normal;
   font-weight: 400;
   line-height: normal;
-  margin-right: 58px;
   cursor: pointer;
   padding: 10px 10px 10px 10px;
+  margin-left: 0;
 }
 .favorites-radio__custom {
   display: inline-block;
@@ -445,6 +448,12 @@ html {
   line-height: normal;
   letter-spacing: 1px;
   margin-bottom: 15px;
+}
+
+.label-wrapper {
+  display: flex;
+  width: 195px;
+  margin-right: 2px;
 }
 
 .coffeshop {
