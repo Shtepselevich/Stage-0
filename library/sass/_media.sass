@@ -52,3 +52,26 @@
                 text-align: left
             &__rs
                 margin: auto
+@media (max-width: 768px)
+    .navbar
+        &-menu
+            display: flex
+            flex-direction: column
+            justify-content: space-between
+            align-items: center
+            position: absolute
+            top: 90px
+            right: -332px
+            width: 332px
+            height: 480px
+            background-color: #0C0C0E
+            padding-top: 10px
+            padding-bottom: 100px
+            visibility: hidden
+            &__item
+                padding-right: 0
+        &-burger
+            display: block
+    .header.open .navbar-menu
+        transform: translateX(-100%)
+        visibility: visible
