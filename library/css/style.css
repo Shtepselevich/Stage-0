@@ -1082,4 +1082,39 @@ html {
   .slider-pagination__button5 {
     display: block;
   }
+  .favorites-radio {
+    margin-left: 0;
+  }
+  .favorites-header {
+    margin: auto;
+  }
+  .favorites-header__title {
+    margin-left: 20px;
+  }
+  .menu {
+    flex-wrap: wrap;
+  }
+  .menu-left {
+    margin-bottom: 40px;
+  }
+  .librarycard-checkcard__wrapper {
+    margin-left: auto;
+  }
+  .librarycard-getcard {
+    margin-right: auto;
+  }
+  .librarycard-getcard__title {
+    text-align: center;
+  }
+  .librarycard-getcard__text {
+    text-align: center;
+    width: 600px;
+  }
+  .librarycard-getcard__text br {
+    display: none;
+  }
+  .librarycard-getcard__button-wrapper {
+    margin-left: -20px;
+    justify-content: center;
+  }
 }
