@@ -19,6 +19,12 @@ html {
   scroll-behavior: smooth;
 }
 
+.body-wrapper {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+}
+
 .header {
   background-color: #0C0C0E;
   height: 90px;
@@ -80,11 +86,42 @@ html {
   opacity: 0.3;
   transition: opacity 0.6s linear;
 }
-.navbar-icon:hover img {
-  transform: scale(1.2);
-}
 .navbar-burger {
+  margin-bottom: 7px;
+  margin-left: 20px;
+  margin-right: 20px;
   display: none;
+  position: relative;
+  width: 45px;
+  height: 20px;
+  background-color: #0C0C0E;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+.navbar-burger span {
+  display: block;
+  position: absolute;
+  width: 45px;
+  height: 2px;
+  background-color: #fff;
+  transition: opacity 0.3s, transform 0.5s;
+  will-change: transform;
+}
+.navbar-burger span:nth-child(1) {
+  transform: translateY(-10px);
+}
+.navbar-burger span:nth-child(3) {
+  transform: translateY(10px);
+}
+.header.open .navbar-burger span:nth-child(1) {
+  transform: translateY(0) rotate(45deg);
+}
+.header.open .navbar-burger span:nth-child(2) {
+  opacity: 0;
+}
+.header.open .navbar-burger span:nth-child(3) {
+  transform: translateY(0) rotate(-45deg);
 }
 
 .welcome {
@@ -153,11 +190,9 @@ html {
   margin-bottom: 20px;
 }
 
-.slider {
-  display: flex;
-  flex-direction: column;
-}
 .slider-wrapper {
+  max-width: 1440px;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -173,6 +208,24 @@ html {
 }
 .slider-wrapper__image3 {
   margin-right: 0;
+}
+.slider-button {
+  display: none;
+  width: 24px;
+  height: 24px;
+  background: transparent;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: none;
+  cursor: pointer;
+}
+.slider-button__prev {
+  margin-left: 58px;
+  background: url(../image/icons/arrow_prev.svg);
+}
+.slider-button__next {
+  margin-right: 58px;
+  background: url(../image/icons/arrow_next.svg);
 }
 .slider-pagination {
   display: flex;
@@ -192,6 +245,12 @@ html {
 }
 .slider-pagination__button:hover {
   transform: scale(1.2);
+}
+.slider-pagination__button4 {
+  display: none;
+}
+.slider-pagination__button5 {
+  display: none;
 }
 .slider-pagination__span1 {
   display: inline-block;
@@ -235,11 +294,14 @@ html {
   font-style: normal;
   font-weight: 700;
   line-height: normal;
-  margin-bottom: 40px;
+  margin-bottom: 29px;
   margin-left: 20px;
 }
 .favorites-radio {
-  margin-bottom: 40px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 31px;
+  width: 775px;
 }
 .favorites-radio__input {
   width: 0;
@@ -255,9 +317,9 @@ html {
   font-style: normal;
   font-weight: 400;
   line-height: normal;
-  margin-right: 58px;
   cursor: pointer;
   padding: 10px 10px 10px 10px;
+  margin-left: 0;
 }
 .favorites-radio__custom {
   display: inline-block;
@@ -449,6 +511,12 @@ html {
   margin-bottom: 15px;
 }
 
+.label-wrapper {
+  display: flex;
+  width: 195px;
+  margin-right: 2px;
+}
+
 .coffeshop {
   display: flex;
   flex-direction: column;
@@ -468,6 +536,7 @@ html {
 
 .menu {
   max-width: 1400px;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -556,6 +625,7 @@ html {
 }
 .contacts-wrapper {
   max-width: 1400px;
+  width: 100%;
   display: flex;
   justify-content: space-between;
 }
@@ -625,6 +695,7 @@ html {
 
 .checkcard-getcard__wrapper {
   max-width: 1400px;
+  width: 100%;
   display: flex;
   justify-content: space-between;
 }
@@ -888,14 +959,30 @@ html {
 }
 
 @media (max-width: 1439px) {
+  .slider-wrapper {
+    justify-content: center;
+  }
+  .slider-wrapper__image1 {
+    margin-right: 20px;
+  }
   .slider-wrapper__image2 {
-    margin-right: 0;
+    margin-left: 20px;
+    margin-right: auto;
   }
   .slider-wrapper__image3 {
-    display: none !important;
+    display: none;
   }
   .slider-pagination__button3 {
     display: none;
+  }
+  .favorites-radio {
+    margin-left: 50px;
+  }
+  .favorites-header {
+    margin: auto;
+  }
+  .favorites-header__title {
+    margin-left: auto;
   }
   .favorites-winter {
     align-items: center;
@@ -929,8 +1016,130 @@ html {
   }
   .footer-bot__year {
     margin-right: auto;
+    max-width: 159px;
+    text-align: left;
   }
   .footer-bot__rs {
+    margin-left: 6.5%;
+  }
+}
+@media (max-width: 1024px) {
+  .navbar-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    top: 0px;
+    right: -332px;
+    width: 332px;
+    height: 570px;
+    background-color: #0C0C0E;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    visibility: hidden;
+    transition: transform 0.5s, visibility 0.5s;
+  }
+  .navbar-menu__item {
+    padding-right: 0;
+  }
+  .navbar-icon {
+    z-index: 2;
+  }
+  .navbar-burger {
+    display: block;
+  }
+  .header.open .navbar-menu {
+    transform: translateX(-100%);
+    visibility: visible;
+  }
+}
+@media (max-width: 769px) {
+  .about-text {
+    height: 80px;
+    width: 728px;
+  }
+  .slider-wrapper {
+    justify-content: center;
+    padding-bottom: 20px;
+  }
+  .slider-wrapper__image1 {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .slider-wrapper__image2 {
+    display: none;
+  }
+  .slider-wrapper__image3 {
+    display: none;
+  }
+  .slider-button {
+    display: block;
+  }
+  .slider-pagination__button3 {
+    display: block;
+  }
+  .slider-pagination__button4 {
+    display: block;
+  }
+  .slider-pagination__button5 {
+    display: block;
+  }
+  .favorites {
+    padding-left: 0;
+  }
+  .favorites-radio {
+    margin-left: 0;
+  }
+  .favorites-header {
     margin: auto;
+  }
+  .favorites-header__title {
+    margin-left: 20px;
+  }
+  .favorites-winter {
+    margin-left: 9%;
+  }
+  .menu {
+    flex-wrap: wrap;
+  }
+  .menu-left {
+    margin-bottom: 40px;
+  }
+  .coffeshop-info {
+    width: 100%;
+    white-space: normal;
+    letter-spacing: 1.85px;
+  }
+  .coffeshop-info br {
+    display: none;
+  }
+  .librarycard-checkcard__wrapper {
+    margin-left: auto;
+  }
+  .librarycard-getcard {
+    margin-right: auto;
+  }
+  .librarycard-getcard__title {
+    text-align: center;
+  }
+  .librarycard-getcard__text {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    text-align: center;
+    width: 600px;
+  }
+  .librarycard-getcard__text br {
+    display: none;
+  }
+  .librarycard-getcard__button-wrapper {
+    margin-left: -20px;
+    justify-content: center;
+  }
+  .contacts-left {
+    margin-bottom: 80px;
+  }
+  .contacts-map {
+    margin-right: auto;
   }
 }
