@@ -6,7 +6,8 @@ document.getElementById("menu").addEventListener('click', event => {
 document.getElementById("burger").addEventListener('click', event => {
     event._isClickWithInMenu = true;
 });
-document.body.addEventListener('click', event => {
-    if (event._isClickWithInMenu) return;
-    document.querySelector(".header").classList.remove("open")
+document.querySelectorAll(".header .menu a").forEach(link => {
+    link.addEventListener("click", function(event) {
+        document.querySelector(".header").classList.remove("open");
+    });
 });
