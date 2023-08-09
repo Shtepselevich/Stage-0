@@ -16,10 +16,13 @@
             font-style: normal
             font-weight: 700
             line-height: normal
-            margin-bottom: 40px
+            margin-bottom: 29px
             margin-left: 20px
     &-radio
-        margin-bottom: 40px
+        display: flex
+        align-items: center
+        margin-bottom: 31px
+        width: 775px
         &__input
             width: 0
             height: 0
@@ -33,9 +36,9 @@
             font-style: normal
             font-weight: 400
             line-height: normal
-            margin-right: 58px
             cursor: pointer
             padding: 10px 10px 10px 10px
+            margin-left: 0
         &__custom
             display: inline-block
             position: relative
@@ -64,6 +67,7 @@
         &__label
             &:has(.favorites-radio__input:checked)
                 font-weight: 700
+
     &-winter
         display: flex
         align-items: flex-start
@@ -206,3 +210,8 @@
             line-height: normal
             letter-spacing: 1px
             margin-bottom: 15px
+.label
+    &-wrapper
+        display: flex
+        width: 195px
+        margin-right: 2px

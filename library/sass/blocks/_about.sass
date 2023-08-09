@@ -30,9 +30,9 @@
         height: 40px
         margin-bottom: 20px
 .slider
-    display: flex
-    flex-direction: column
     &-wrapper
+        max-width: 1440px
+        width: 100%
         display: flex
         align-items: center
         justify-content: space-between
@@ -46,6 +46,21 @@
             margin-right: 25px
         &__image3
             margin-right: 0
+    &-button
+        display: none
+        width: 24px
+        height: 24px
+        background: transparent
+        background-repeat: no-repeat
+        background-size: cover
+        border: none
+        cursor: pointer
+        &__prev
+            margin-left: 58px
+            background: url(../image/icons/arrow_prev.svg)
+        &__next
+            margin-right: 58px
+            background: url(../image/icons/arrow_next.svg)
     &-pagination
         display: flex
         align-items: center
@@ -62,6 +77,10 @@
             transition: transform 0.3s ease
             &:hover
                 transform: scale(1.2)
+        &__button4
+            display: none
+        &__button5
+            display: none
         &__span1
             display: inline-block
             width: 16px

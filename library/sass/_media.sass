@@ -1,14 +1,24 @@
 @media (max-width: 1439px)
     .slider
         &-wrapper
+            justify-content: center
+            &__image1
+                margin-right: 20px
             &__image2
-                margin-right: 0
+                margin-left: 20px
+                margin-right: auto
             &__image3
-                display: none !important
+                display: none
         &-pagination
             &__button3
                 display: none
     .favorites
+        &-radio
+            margin-left: 50px
+        &-header
+            margin: auto
+            &__title
+                margin-left: auto
         &-winter
             align-items: center
             flex-direction: column
@@ -38,5 +48,103 @@
         &-bot
             &__year
                 margin-right: auto
+                max-width: 159px
+                text-align: left
             &__rs
-                margin: auto
+                margin-left: 6.5%
+@media (max-width: 1024px)
+    .navbar
+        &-menu
+            display: flex
+            flex-direction: column
+            justify-content: space-between
+            align-items: center
+            position: absolute
+            top: 0px
+            right: -332px
+            width: 332px
+            height: 570px
+            background-color: #0C0C0E
+            padding-top: 100px
+            padding-bottom: 100px
+            visibility: hidden
+            transition: transform .5s, visibility .5s
+            &__item
+                padding-right: 0
+        &-icon
+            z-index: 2
+        &-burger
+            display: block
+    .header.open .navbar-menu
+        transform: translateX(-100%)
+        visibility: visible
+@media (max-width: 769px)
+    .about
+        &-text
+            height: 80px
+            width: 728px
+    .slider
+        &-wrapper
+            justify-content: center
+            padding-bottom: 20px
+            &__image1
+                margin-left: 0
+                margin-right: 0
+            &__image2
+                display: none
+            &__image3
+                display: none
+        &-button
+            display: block
+        &-pagination
+            &__button3
+                display: block
+            &__button4
+                display: block
+            &__button5
+                display: block
+    .favorites
+        padding-left: 0
+        &-radio
+            margin-left: 0
+        &-header
+            margin: auto
+            &__title
+                margin-left: 20px
+        &-winter
+            margin-left: 9%
+    .menu
+        flex-wrap: wrap
+        &-left
+            margin-bottom: 40px
+    .coffeshop
+        &-info
+            width: 100%
+            white-space: normal
+            letter-spacing: 1.85px
+        &-info br
+            display: none
+    .librarycard
+        &-checkcard
+            &__wrapper
+                margin-left: auto
+        &-getcard
+            margin-right: auto
+            &__title
+                text-align: center
+            &__text
+                margin-top: 40px
+                margin-bottom: 40px
+                text-align: center
+                width: 600px
+            &__text br
+                display: none
+            &__button
+                &-wrapper
+                    margin-left: -20px
+                    justify-content: center
+    .contacts
+        &-left
+            margin-bottom: 80px
+        &-map
+            margin-right: auto
