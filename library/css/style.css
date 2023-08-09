@@ -1024,6 +1024,9 @@ html {
   }
 }
 @media (max-width: 1024px) {
+  .about-text {
+    height: 80px;
+  }
   .navbar-menu {
     display: flex;
     flex-direction: column;
@@ -1053,12 +1056,6 @@ html {
     transform: translateX(-100%);
     visibility: visible;
   }
-}
-@media (max-width: 769px) {
-  .about-text {
-    height: 80px;
-    width: 728px;
-  }
   .slider-wrapper {
     justify-content: center;
     padding-bottom: 20px;
@@ -1085,6 +1082,18 @@ html {
   .slider-pagination__button5 {
     display: block;
   }
+  .menu {
+    flex-wrap: wrap;
+  }
+  .menu-left {
+    margin-bottom: 40px;
+  }
+}
+@media (max-width: 769px) {
+  .about-text {
+    height: 80px;
+    max-width: 728px;
+  }
   .favorites {
     padding-left: 0;
   }
@@ -1099,12 +1108,6 @@ html {
   }
   .favorites-winter {
     margin-left: 9%;
-  }
-  .menu {
-    flex-wrap: wrap;
-  }
-  .menu-left {
-    margin-bottom: 40px;
   }
   .coffeshop-info {
     width: 100%;
@@ -1141,5 +1144,14 @@ html {
   }
   .contacts-map {
     margin-right: auto;
+  }
+}
+@media (max-width: 729px) {
+  .label-wrapper {
+    max-width: 150px;
+    margin-left: 0;
+  }
+  .favorites-winter {
+    margin-left: 1%;
   }
 }
