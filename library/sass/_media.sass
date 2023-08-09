@@ -48,11 +48,11 @@
         &-bot
             &__year
                 margin-right: auto
-                width: 159px
+                max-width: 159px
                 text-align: left
             &__rs
-                margin: auto
-@media (max-width: 768px)
+                margin-left: 6.5%
+@media (max-width: 769px)
     .navbar
         &-menu
             display: flex
@@ -85,6 +85,7 @@
     .slider
         &-wrapper
             justify-content: center
+            padding-bottom: 20px
             &__image1
                 margin-left: 0
                 margin-right: 0
@@ -102,16 +103,26 @@
             &__button5
                 display: block
     .favorites
+        padding-left: 0
         &-radio
             margin-left: 0
         &-header
             margin: auto
             &__title
                 margin-left: 20px
+        &-winter
+            margin-left: 9%
     .menu
         flex-wrap: wrap
         &-left
             margin-bottom: 40px
+    .coffeshop
+        &-info
+            width: 100%
+            white-space: normal
+            letter-spacing: 1.85px
+        &-info br
+            display: none
     .librarycard
         &-checkcard
             &__wrapper
@@ -121,6 +132,8 @@
             &__title
                 text-align: center
             &__text
+                margin-top: 40px
+                margin-bottom: 40px
                 text-align: center
                 width: 600px
             &__text br
@@ -129,3 +142,8 @@
                 &-wrapper
                     margin-left: -20px
                     justify-content: center
+    .contacts
+        &-left
+            margin-bottom: 80px
+        &-map
+            margin-right: auto

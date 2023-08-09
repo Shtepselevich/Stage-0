@@ -1016,14 +1016,14 @@ html {
   }
   .footer-bot__year {
     margin-right: auto;
-    width: 159px;
+    max-width: 159px;
     text-align: left;
   }
   .footer-bot__rs {
-    margin: auto;
+    margin-left: 6.5%;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 769px) {
   .navbar-menu {
     display: flex;
     flex-direction: column;
@@ -1059,6 +1059,7 @@ html {
   }
   .slider-wrapper {
     justify-content: center;
+    padding-bottom: 20px;
   }
   .slider-wrapper__image1 {
     margin-left: 0;
@@ -1082,6 +1083,9 @@ html {
   .slider-pagination__button5 {
     display: block;
   }
+  .favorites {
+    padding-left: 0;
+  }
   .favorites-radio {
     margin-left: 0;
   }
@@ -1091,11 +1095,22 @@ html {
   .favorites-header__title {
     margin-left: 20px;
   }
+  .favorites-winter {
+    margin-left: 9%;
+  }
   .menu {
     flex-wrap: wrap;
   }
   .menu-left {
     margin-bottom: 40px;
+  }
+  .coffeshop-info {
+    width: 100%;
+    white-space: normal;
+    letter-spacing: 1.85px;
+  }
+  .coffeshop-info br {
+    display: none;
   }
   .librarycard-checkcard__wrapper {
     margin-left: auto;
@@ -1107,6 +1122,8 @@ html {
     text-align: center;
   }
   .librarycard-getcard__text {
+    margin-top: 40px;
+    margin-bottom: 40px;
     text-align: center;
     width: 600px;
   }
@@ -1116,5 +1133,11 @@ html {
   .librarycard-getcard__button-wrapper {
     margin-left: -20px;
     justify-content: center;
+  }
+  .contacts-left {
+    margin-bottom: 80px;
+  }
+  .contacts-map {
+    margin-right: auto;
   }
 }
