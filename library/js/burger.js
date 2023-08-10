@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
     document.querySelector(".header").classList.toggle("open");
   });
 });
+
 document.getElementById("menu").addEventListener("click", (event) => {
   event._isClickWithInMenu = true;
 });
