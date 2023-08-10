@@ -191,6 +191,7 @@ html {
   padding-right: 20px;
   padding-bottom: 35px;
   padding-left: 20px;
+  position: relative;
 }
 .slider-wrapper__image {
   width: 450px;
@@ -209,13 +210,16 @@ html {
   background-size: cover;
   border: none;
   cursor: pointer;
+  position: absolute;
+  top: 50%;
+  z-index: 3;
 }
 .slider-button__prev {
-  margin-left: 58px;
+  left: 10%;
   background: url(../image/icons/arrow_prev.svg);
 }
 .slider-button__next {
-  margin-right: 58px;
+  right: 10%;
   background: url(../image/icons/arrow_next.svg);
 }
 .slider-pagination {

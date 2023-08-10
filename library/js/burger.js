@@ -9,6 +9,11 @@ document.getElementById("menu").addEventListener("click", (event) => {
 document.getElementById("burger").addEventListener("click", (event) => {
   event._isClickWithInMenu = true;
 });
+document.body.addEventListener("click", function (event) {
+  if (!document.querySelector(".navbar").contains(event.target)) {
+    document.querySelector(".header").classList.remove("open");
+  }
+});
 const menuItems = document.querySelectorAll(".navbar-menu__link");
 menuItems.forEach((item) => {
   item.addEventListener("click", function (event) {
