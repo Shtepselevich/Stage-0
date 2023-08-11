@@ -40,6 +40,7 @@
         padding-right: 20px
         padding-bottom: 35px
         padding-left: 20px
+        position: relative
         &__image
             width: 450px
             height: 560px
@@ -55,11 +56,14 @@
         background-size: cover
         border: none
         cursor: pointer
+        position: absolute
+        top: 50%
+        z-index: 3
         &__prev
-            margin-left: 58px
+            left: 10%
             background: url(../image/icons/arrow_prev.svg)
         &__next
-            margin-right: 58px
+            right: 10%
             background: url(../image/icons/arrow_next.svg)
     &-pagination
         display: flex
@@ -75,8 +79,6 @@
             cursor: pointer
             padding: 5px 5px 5px 5px
             transition: transform 0.3s ease
-            &:hover
-                transform: scale(1.2)
         &__button4
             display: none
         &__button5

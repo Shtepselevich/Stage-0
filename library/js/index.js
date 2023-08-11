@@ -1,12 +1,9 @@
-console.log("1. Вёрстка валидная +10\n2. Вёрстка семантическая +16\n3. Вёрстка соответствует макету +54\n4. Вёрстка соответствует макету +54\n5. Общие требования к верстке +20\nОбщая сумма баллов: 100.");
-document.addEventListener("DOMContentLoaded", function(){document.getElementById("burger").addEventListener("click", function(){document.querySelector(".header").classList.toggle("open")})});
-document.getElementById("menu").addEventListener('click', event => {
-    event._isClickWithInMenu = true;
-});
-document.getElementById("burger").addEventListener('click', event => {
-    event._isClickWithInMenu = true;
-});
-document.body.addEventListener('click', event => {
-    if (event._isClickWithInMenu) return;
-    document.querySelector(".header").classList.remove("open")
-});
+/*
+console.log(
+  "1. Вёрстка валидная +10\n2. Вёрстка семантическая +16\n3. Вёрстка соответствует макету +54\n4. Вёрстка соответствует макету +54\n5. Общие требования к верстке +20\nОбщая сумма баллов: 100."
+);
+*/
+
+console.log(
+  "1. Вёрстка соответствует макету. Ширина экрана 768px +26\n2. Ни на одном из разрешений до 640px включительно не появляется горизонтальная полоса прокрутки. Весь контент страницы при этом сохраняется: не обрезается и не удаляется +12\n3. На ширине экрана 768рх реализовано адаптивное меню +12\nОбщая сумма баллов: 50."
+);
