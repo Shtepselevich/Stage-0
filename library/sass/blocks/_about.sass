@@ -30,6 +30,8 @@
         height: 40px
         margin-bottom: 20px
 .slider
+    display: flex
+    flex-direction: column
     &-wrapper
         max-width: 1440px
         width: 100%
@@ -83,21 +85,15 @@
             display: none
         &__button5
             display: none
-        &__span1
-            display: inline-block
-            width: 16px
-            height: 16px
-            border-radius: 50%
-            background-color: #BB945F
-        &__span2
+        &__span
             display: inline-block
             width: 16px
             height: 16px
             border-radius: 50%
             background-color: #0C0C0E
-        &__span3
-            display: inline-block
-            width: 16px
-            height: 16px
-            border-radius: 50%
-            background-color: #0C0C0E
+            &-active
+                display: inline-block
+                width: 16px
+                height: 16px
+                border-radius: 50%
+                background-color: #BB945F
