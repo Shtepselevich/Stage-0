@@ -183,27 +183,33 @@ html {
 
 .slider {
   display: flex;
-  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 1440px;
+  width: 100%;
 }
 .slider-wrapper {
   max-width: 1440px;
-  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: relative;
   padding-top: 0;
-  padding-right: 20px;
+  padding-right: -5px;
   padding-bottom: 35px;
   padding-left: 20px;
-  position: relative;
 }
 .slider-wrapper__image {
   width: 450px;
   height: 560px;
   margin-right: 25px;
 }
-.slider-wrapper__image3 {
-  margin-right: 0;
+.slider-wrapper__image4 {
+  display: none;
+}
+.slider-wrapper__image5 {
+  display: none;
 }
 .slider-button {
   display: none;
@@ -214,25 +220,25 @@ html {
   background-size: cover;
   border: none;
   cursor: pointer;
-  position: absolute;
   top: 50%;
   z-index: 3;
 }
 .slider-button__prev {
-  left: 10%;
   background: url(../image/icons/arrow_prev.svg);
 }
 .slider-button__next {
-  right: 10%;
   background: url(../image/icons/arrow_next.svg);
 }
 .slider-pagination {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   padding-bottom: 35px;
+  width: 100%;
 }
 .slider-pagination__button {
+  margin-right: 0;
+  margin-left: 0;
   background-color: transparent;
   background-repeat: no-repeat;
   width: 26px;
@@ -912,9 +918,6 @@ html {
 }
 
 @media (max-width: 1439px) {
-  .slider-wrapper {
-    justify-content: center;
-  }
   .slider-wrapper__image1 {
     margin-right: 20px;
   }
@@ -1017,6 +1020,7 @@ html {
   }
   .slider-wrapper {
     justify-content: center;
+    padding-left: 0;
     padding-bottom: 20px;
   }
   .slider-wrapper__image1 {
@@ -1052,6 +1056,15 @@ html {
   .about-text {
     height: 80px;
     max-width: 728px;
+  }
+  .slider-wrapper {
+    padding-left: 0;
+  }
+  .slider-button__prev {
+    margin-left: 9%;
+  }
+  .slider-button__next {
+    margin-right: 9%;
   }
   .favorites {
     padding-left: 0;
