@@ -224,9 +224,11 @@ html {
   z-index: 3;
 }
 .slider-button__prev {
+  margin-left: 9%;
   background: url(../image/icons/arrow_prev.svg);
 }
 .slider-button__next {
+  margin-right: 9%;
   background: url(../image/icons/arrow_next.svg);
 }
 .slider-pagination {
@@ -1059,12 +1061,6 @@ html {
   }
   .slider-wrapper {
     padding-left: 0;
-  }
-  .slider-button__prev {
-    margin-left: 9%;
-  }
-  .slider-button__next {
-    margin-right: 9%;
   }
   .favorites {
     padding-left: 0;
