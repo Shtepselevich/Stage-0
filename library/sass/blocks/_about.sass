@@ -36,24 +36,24 @@
     flex-wrap: wrap
     max-width: 1440px
     width: 100%
-    &-wrapper
-        max-width: 1440px
+    &-line
         display: flex
         align-items: center
         justify-content: space-between
         position: relative
+        left: 0
+        transition: 1s
+    &-wrapper
+        max-width: 1440px
         padding-top: 0
         padding-right: -5px
         padding-bottom: 35px
         padding-left: 20px
+        overflow: hidden
         &__image
             width: 450px
             height: 560px
             margin-right: 25px
-        &__image4
-            display: none
-        &__image5
-            display: none
     &-button
         display: none
         width: 24px
@@ -88,6 +88,8 @@
             cursor: pointer
             padding: 5px 5px 5px 5px
             transition: transform 0.3s ease
+            &.active span
+                background-color: #BB945F
         &__button4
             display: none
         &__button5
@@ -98,9 +100,3 @@
             height: 16px
             border-radius: 50%
             background-color: #0C0C0E
-            &-active
-                display: inline-block
-                width: 16px
-                height: 16px
-                border-radius: 50%
-                background-color: #BB945F

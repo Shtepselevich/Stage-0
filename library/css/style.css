@@ -189,27 +189,26 @@ html {
   max-width: 1440px;
   width: 100%;
 }
-.slider-wrapper {
-  max-width: 1440px;
+.slider-line {
   display: flex;
   align-items: center;
   justify-content: space-between;
   position: relative;
+  left: 0;
+  transition: 1s;
+}
+.slider-wrapper {
+  max-width: 1440px;
   padding-top: 0;
   padding-right: -5px;
   padding-bottom: 35px;
   padding-left: 20px;
+  overflow: hidden;
 }
 .slider-wrapper__image {
   width: 450px;
   height: 560px;
   margin-right: 25px;
-}
-.slider-wrapper__image4 {
-  display: none;
-}
-.slider-wrapper__image5 {
-  display: none;
 }
 .slider-button {
   display: none;
@@ -250,6 +249,9 @@ html {
   padding: 5px 5px 5px 5px;
   transition: transform 0.3s ease;
 }
+.slider-pagination__button.active span {
+  background-color: #BB945F;
+}
 .slider-pagination__button4 {
   display: none;
 }
@@ -262,13 +264,6 @@ html {
   height: 16px;
   border-radius: 50%;
   background-color: #0C0C0E;
-}
-.slider-pagination__span-active {
-  display: inline-block;
-  width: 16px;
-  height: 16px;
-  border-radius: 50%;
-  background-color: #BB945F;
 }
 
 .favorites {
@@ -920,21 +915,16 @@ html {
 }
 
 @media (max-width: 1439px) {
+  .slider-wrapper {
+    max-width: 940px;
+    padding-right: 0;
+    padding-left: 7.5px;
+  }
   .slider-wrapper__image1 {
-    margin-right: 20px;
+    margin-right: 12.5px;
   }
   .slider-wrapper__image2 {
-    margin-left: 20px;
-    margin-right: auto;
-  }
-  .slider-wrapper__image3 {
-    display: none;
-  }
-  .slider-wrapper__image4 {
-    display: none;
-  }
-  .slider-wrapper__image5 {
-    display: none;
+    margin-left: 12.5px;
   }
   .slider-pagination__button4 {
     display: block;
@@ -1021,19 +1011,13 @@ html {
     visibility: visible;
   }
   .slider-wrapper {
+    max-width: 450px;
     justify-content: center;
     padding-left: 0;
     padding-bottom: 20px;
   }
   .slider-wrapper__image1 {
     margin-left: 0;
-    margin-right: 0;
-  }
-  .slider-wrapper__image2 {
-    display: none;
-  }
-  .slider-wrapper__image3 {
-    display: none;
   }
   .slider-button {
     display: block;
@@ -1136,6 +1120,9 @@ html {
     transition: opacity 0.6s linear;
   }
   .slider-pagination__button:hover span {
+    background-color: #BB945F;
+  }
+  .slider-pagination__button:active span {
     background-color: #BB945F;
   }
   .favorites-book__button:hover {
