@@ -350,6 +350,7 @@ html {
   justify-content: space-between;
   flex-wrap: wrap;
   padding-left: 20px;
+  display: none;
 }
 .favorites-spring {
   display: flex;
@@ -374,6 +375,9 @@ html {
   flex-wrap: wrap;
   padding-left: 20px;
   display: none;
+}
+.favorites-season {
+  display: block !important;
 }
 .favorites-book1 {
   position: relative;
