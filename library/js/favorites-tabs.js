@@ -1,17 +1,26 @@
-document.querySelectorAll(".favorites-radio__input").forEach((item) =>
-  item.addEventListener("click", function (e) {
-    e.preventDefault();
-    const id = e.target.getAttribute("href").replace("#", "");
+// Получаем все радиокнопки
+const radioButtons = document.querySelectorAll(".favorites-radio__input");
 
-    document
-      .querySelectorAll(".favorites-radio__input")
-      .forEach((child) =>
-        child.classList.remove("favorites-radio__input-active")
-      );
-    document
-      .querySelectorAll(".favorites-season")
-      .forEach((child) => child.classList.remove("favorites-season-active"));
-    item.classList.add("favorites-radio__input-active");
-    document.getElementById(id).classList.add("favorites-radio__input-active");
-  })
-);
+// Получаем все блоки с сезонами
+const seasonBlocks = document.querySelectorAll(".favorites-season");
+
+// Добавляем обработчик события для каждой радиокнопки
+radioButtons.forEach((radioButton) => {
+  radioButton.addEventListener("change", function () {
+    // Получаем значение выбранной радиокнопки
+    const selectedSeason = this.value;
+
+    // Скрываем все блоки с сезонами
+    seasonBlocks.forEach((block) => {
+      block.style.display = "none";
+    });
+
+    // Отображаем блок с сезоном, соответствующим выбранной радиокнопке
+    const selectedBlock = document.querySelector(
+      `.favorites-${selectedSeason}`
+    );
+    if (selectedBlock) {
+      selectedBlock.style.display = "flex";
+    }
+  });
+});

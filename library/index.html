@@ -25,6 +25,9 @@
             defer></script>
     <script src="js/slider-about.js"
             defer></script>
+    <script src="js/favorites-tabs.js"
+            defer></script>
+
 </head>
 
 <body>
@@ -147,11 +150,11 @@
                                 Summer</label>
                         </div>
                         <div class="label-wrapper">
-                            <label for="autumun"
+                            <label for="autumn"
                                    class="favorites-radio__label">
                                 <input type="radio"
-                                       id="autumun"
-                                       value="autumun"
+                                       id="autumn"
+                                       value="autumn"
                                        name="season"
                                        class="favorites-radio__input">
                                 <span class="favorites-radio__custom"></span>
@@ -159,8 +162,9 @@
                         </div>
                     </div>
                 </div>
-                <div id='winter'
-                     class="favorites-winter favorites-season">
+                <div id="winter"
+                     class="favorites-winter favorites-season"
+                     data-season="winter">
                     <div class="favorites-book1">
                         <div class="favorites-book-image">
                             <img src="image/books/winter/book1.png"
@@ -232,8 +236,9 @@
                         </div>
                     </div>
                 </div>
-                <div id='spring'
-                     class="favorites-spring favorites-season">
+                <div id="spring"
+                     class="favorites-spring favorites-season"
+                     data-season="spring">
                     <div class="favorites-book1">
                         <div class="favorites-book-image">
                             <img src="image/books/spring/book1.png"
@@ -302,8 +307,9 @@
                         </div>
                     </div>
                 </div>
-                <div id='summer'
-                     class="favorites-summer favorites-season">
+                <div id="summer"
+                     class="favorites-summer favorites-season"
+                     data-season="summer">
                     <div class="favorites-book1">
                         <div class="favorites-book-image">
                             <img src="image/books/summer/book1.png"
@@ -380,8 +386,9 @@
                         </div>
                     </div>
                 </div>
-                <div id='autumn'
-                     class="favorites-autumn favorites-season">
+                <div id="autumn"
+                     class="favorites-autumn favorites-season"
+                     data-season="autumn">
                     <div class="favorites-book1">
                         <div class="favorites-book-image">
                             <img src="image/books/autumn/book1.png"
