@@ -914,6 +914,185 @@ html {
   letter-spacing: 2px;
 }
 
+.modalprofile {
+  display: flex;
+  background-color: #0C0C0E;
+  width: 600px;
+  height: 400px;
+}
+.modalprofile-left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 170px;
+  height: 403px;
+  padding-top: 139px;
+}
+.modalprofile-left__initials {
+  width: 80px;
+  height: 80px;
+  background: #FFF;
+  padding: 30px 30px 30px 27px;
+  margin-bottom: 15px;
+}
+.modalprofile-left__initials-header {
+  color: #BB945F;
+  text-align: center;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  text-transform: capitalize;
+}
+.modalprofile-left__fullname {
+  width: 120px;
+  height: 30px;
+  background: #FFF;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+.modalprofile-left__fullname-header {
+  color: #000;
+  text-align: center;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  text-transform: capitalize;
+}
+.modalprofile-right {
+  width: 430px;
+  height: 400px;
+  background-color: #fff;
+  padding: 25px 25px 39px 20px;
+}
+.modalprofile-right__header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+.modalprofile-right__list {
+  text-decoration: none;
+  list-style-type: none;
+}
+.modalprofile-right__title {
+  color: #000;
+  text-align: center;
+  font-family: Forum;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  margin-left: 0;
+  margin-top: 15px;
+}
+.modalprofile-right__close {
+  cursor: pointer;
+  align-self: start;
+  margin-right: 0;
+  margin-top: 0;
+  width: 15px;
+  height: 15px;
+  border: none;
+  background-color: transparent;
+}
+.modalprofile-right__close-icon {
+  width: 15px;
+  height: 15px;
+}
+.modalprofile-interactive {
+  display: flex;
+  margin-left: 0;
+  margin-bottom: 20px;
+}
+.modalprofile-interactive__items {
+  margin-left: 0;
+  margin-right: 20px;
+}
+.modalprofile-interactive__item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.modalprofile-interactive__item-header {
+  color: #000;
+  text-align: center;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0.4px;
+  text-transform: capitalize;
+}
+.modalprofile-rented {
+  margin-bottom: 40px;
+}
+.modalprofile-rented__header {
+  color: #0C0C0E;
+  text-align: left;
+  font-family: Inter;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+}
+.modalprofile-rented__schedule {
+  margin-left: 26px;
+  margin-bottom: 40px;
+  list-style-type: disc;
+}
+.modalprofile-rented__schedule-item {
+  color: #000;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 2px;
+  text-transform: capitalize;
+  margin-bottom: 10px;
+}
+.modalprofile-cardnumber__wrapper {
+  display: flex;
+}
+.modalprofile-cardnumber__header {
+  color: #0C0C0E;
+  text-align: center;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  margin-left: 0;
+  margin-right: 15px;
+}
+.modalprofile-cardnumber__number {
+  color: #BB945F;
+  text-align: center;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  margin-left: 0;
+  margin-right: 15px;
+}
+.modalprofile-cardnumber__copy {
+  margin-left: 0;
+  border: none;
+  background: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 @media (max-width: 1439px) {
   .slider-wrapper {
     max-width: 940px;
