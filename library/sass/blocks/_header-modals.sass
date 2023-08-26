@@ -244,6 +244,8 @@
     &-button
         margin-top: 10px
         margin-bottom: 10px
+        &__buy
+            margin-right: 0
     &-question
         color: #000
         text-shadow: 0px 2px 3px rgba(255, 255, 255, 0.16)
@@ -264,6 +266,9 @@
         letter-spacing: 1px
         text-decoration-line: underline
         margin-left: 6px
+    &-item
+        &__buy-price
+            display: flex
 .menuregister
     width: 250px
     height: 382px
@@ -283,3 +288,61 @@
         line-height: 20px
         letter-spacing: 0.2px
         text-transform: capitalize
+.buycard
+    width: 650px
+    height: 540px
+    border: 1px solid #000
+    &-header
+        display: flex
+        align-items: center
+        height: 60px
+        background: #0C0C0E
+        &__title
+            color: #FFF
+            text-align: center
+            font-family: Forum
+            font-size: 40px
+            font-style: normal
+            font-weight: 400
+            line-height: 20px
+            letter-spacing: 0.8px
+            text-transform: uppercase
+        &__button
+            cursor: pointer
+            width: 15px
+            height: 15px
+            border: none
+            background-color: transparent
+            margin-right: 20px
+    &-data
+        padding: 30px 40px 40px 40px
+        display: flex
+        &__price
+            color: #0C0C0E
+            font-family: Inter
+            font-size: 20px
+            font-style: normal
+            font-weight: 700
+            line-height: 20px
+            letter-spacing: 2px
+            text-transform: uppercase
+            margin-left: 20px
+            margin-top: 20px
+        &__text
+            color: #8E8E8E
+            font-family: Inter
+            font-size: 15px
+            font-style: normal
+            font-weight: 400
+            line-height: 20px
+            letter-spacing: 2px
+            margin-left: 40px
+    &-input
+        width: 45px
+        height: 20px
+        border: 1px solid #BB945F
+        outline: none
+        margin-bottom: 10px
+        margin-right: 5px
+        &__cvc
+            margin-bottom: 20px
