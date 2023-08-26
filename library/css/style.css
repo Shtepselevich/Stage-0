@@ -1093,6 +1093,126 @@ html {
   align-items: center;
 }
 
+.drop-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80px;
+  height: 115px;
+  background: #FFF;
+  border: 1px solid #000;
+  padding-top: 5px;
+}
+.drop-title {
+  color: #000;
+  font-family: Inter;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 20px;
+  margin-bottom: 5px;
+}
+.drop-options {
+  color: #000;
+  text-align: center;
+  font-family: Inter;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  margin-bottom: 10px;
+}
+.drop-line {
+  width: 40px;
+  height: 1px;
+  background: #BB945F;
+  border: none;
+  margin-bottom: 15px;
+}
+
+.menulogin {
+  width: 250px;
+  height: 262px;
+  background: #FFF;
+  border: 1px solid #000;
+  padding: 15px 15px 20px 25px;
+}
+.menulogin-list {
+  list-style-type: none;
+}
+.menulogin-header {
+  display: flex;
+  justify-content: space-between;
+}
+.menulogin-title {
+  color: #000;
+  text-align: center;
+  font-family: Forum;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0.4px;
+  margin-top: 5px;
+  margin-left: 72px;
+  margin-bottom: 20px;
+}
+.menulogin-subtitle {
+  color: #000;
+  text-align: left;
+  font-family: Inter;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0.3px;
+  margin-bottom: 10px;
+}
+.menulogin-input {
+  width: 200px;
+  height: 20px;
+  border: 1px solid #BB945F;
+  outline: none;
+  margin-bottom: 10px;
+}
+.menulogin-button {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.menulogin-question {
+  color: #000;
+  text-shadow: 0px 2px 3px rgba(255, 255, 255, 0.16);
+  font-family: Inter;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-right: 0;
+}
+.menulogin-register {
+  color: #0C0C0E;
+  text-align: center;
+  font-family: Inter;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 1px;
+  text-decoration-line: underline;
+  margin-left: 6px;
+}
+
+.menuregister {
+  width: 250px;
+  height: 382px;
+  background: #FFF;
+  border: 1px solid #000;
+  padding: 15px 15px 20px 25px;
+}
+.menuregister-title {
+  margin-left: 60px;
+}
+
 @media (max-width: 1439px) {
   .slider-wrapper {
     max-width: 940px;
