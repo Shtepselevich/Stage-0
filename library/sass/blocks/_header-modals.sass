@@ -83,12 +83,18 @@
         &__items
             margin-left: 0
             margin-right: 20px
+            &-wrapper
+                display: flex
+                justify-content: center
+                margin-top: -5px
         &__item
             display: flex
             flex-direction: column
             justify-content: center
             align-items: center
             gap: 10px
+            &-afterlogin
+                gap: 1px
             &-header
                 color: #000
                 text-align: center
@@ -98,6 +104,16 @@
                 font-weight: 400
                 line-height: 20px
                 letter-spacing: 0.4px
+                text-transform: capitalize
+            &-headerafterlogin
+                color: #000
+                text-align: center
+                font-family: Inter
+                font-size: 10px
+                font-style: normal
+                font-weight: 400
+                line-height: 20px
+                letter-spacing: 0.2px
                 text-transform: capitalize
     &-rented
         margin-bottom: 40px
@@ -256,3 +272,14 @@
     padding: 15px 15px 20px 25px
     &-title
         margin-left: 60px
+.visits
+    &-counter
+        color: #000
+        text-align: center
+        font-family: Inter
+        font-size: 10px
+        font-style: normal
+        font-weight: 400
+        line-height: 20px
+        letter-spacing: 0.2px
+        text-transform: capitalize
