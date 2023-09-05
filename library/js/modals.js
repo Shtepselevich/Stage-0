@@ -12,3 +12,8 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
+// Закрываем дроп меню при клике по заголовкам в н
+// Открывает окно регистрации по клику на заголовок "register"
+document.querySelector(".drop-register").addEventListener("click", function () {
+  document.querySelector(".menuregister").classList.add("active");
+});
