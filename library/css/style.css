@@ -1122,8 +1122,11 @@ html {
   width: 80px;
   height: 115px;
   background: #FFF;
-  border: 1px solid #000;
   padding-top: 5px;
+  position: absolute;
+  top: 56px;
+  right: 19px;
+  visibility: hidden;
 }
 .drop-title {
   color: #000;
