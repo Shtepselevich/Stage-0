@@ -31,20 +31,35 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   // Открывает окно регистрации и закрывает дроп меню при клике на заголовок "register" или "drop-options"
-  var dropRegister = document.querySelector(".drop-register");
-  dropRegister.addEventListener("click", function (event) {
-    event.stopPropagation(); // Предотвращаем всплытие события
-    var menuregisterModal = document.querySelector(".menuregister");
-    menuregisterModal.classList.add("active");
-    showBackgroundForModals();
-    dropMenu.classList.remove("noauth");
-  });
 
-  // Закрывает дроп меню при клике на заголовки внутри дроп-меню, кроме "drop-register"
-  dropMenu.addEventListener("click", function (event) {
-    if (event.target.classList.contains("drop-options")) {
+  document
+    .querySelector(".drop-register")
+    .addEventListener("click", function (event) {
       event.stopPropagation(); // Предотвращаем всплытие события
+      document.querySelector(".menuregister").classList.add("active");
+      showBackgroundForModals();
       dropMenu.classList.remove("noauth");
-    }
-  });
+    });
+
+  // Открывает окно регистрации и закрывает дроп меню при клике на кнопку sign up в разделе digital library card
+
+  document
+    .querySelector(".librarycard-getcard__button-signup")
+    .addEventListener("click", function (event) {
+      event.stopPropagation(); // Предотвращаем всплытие события
+      document.querySelector(".menuregister").classList.add("active");
+      showBackgroundForModals();
+      dropMenu.classList.remove("noauth");
+    });
+
+  // Открывает окно Логина и закрывает дроп меню при клике на заголовок "register" или "drop-options"
+
+  document
+    .querySelector(".drop-login")
+    .addEventListener("click", function (event) {
+      event.stopPropagation(); // Предотвращаем всплытие события
+      document.querySelector(".menulogin").classList.add("active");
+      showBackgroundForModals();
+      dropMenu.classList.remove("noauth");
+    });
 });

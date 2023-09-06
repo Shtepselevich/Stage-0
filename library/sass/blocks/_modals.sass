@@ -217,6 +217,17 @@
     background: #FFF
     border: 1px solid #000
     padding: 15px 15px 20px 25px
+    visibility: hidden
+    opacity: 0
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out
+    &.active
+        opacity: 1
+        visibility: visible
+        position: fixed
+        z-index: 11
+        left: 50%
+        top: 50%
+        transform: translate(-50%, -50%)
     &-list
         list-style-type: none
     &-header
@@ -282,10 +293,12 @@
     width: 250px
     height: 382px
     background: #FFF
-    border: 1px solid #000
     padding: 15px 15px 20px 25px
     visibility: hidden
+    opacity: 0
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out
     &.active
+        opacity: 1
         visibility: visible
         position: fixed
         z-index: 11
@@ -363,7 +376,6 @@
         margin-right: 5px
         &__cvc
             margin-bottom: 20px
-
 .background-overlay
     position: fixed
     top: 0
