@@ -69,8 +69,8 @@
             align-self: start
             margin-right: 0
             margin-top: 0
-            width: 15px
-            height: 15px
+            width: 20px
+            height: 20px
             border: none
             background-color: transparent
             &-icon
@@ -212,6 +212,7 @@
         border: none
         margin-bottom: 15px
 .menulogin
+    position: fixed
     width: 250px
     height: 262px
     background: #FFF
@@ -220,14 +221,13 @@
     visibility: hidden
     opacity: 0
     transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out
+    z-index: 11
+    left: 50%
+    top: 50%
+    transform: translate(-50%, -50%)
     &.active
         opacity: 1
         visibility: visible
-        position: fixed
-        z-index: 11
-        left: 50%
-        top: 50%
-        transform: translate(-50%, -50%)
     &-list
         list-style-type: none
     &-header
@@ -296,7 +296,7 @@
     padding: 15px 15px 20px 25px
     visibility: hidden
     opacity: 0
-    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out
+    transition: opacity 0.9s ease-in-out, visibility 0.9s ease-in-out
     &.active
         opacity: 1
         visibility: visible
@@ -384,4 +384,9 @@
     height: 100%
     background: rgba(0, 0, 0, 0.8)
     z-index: 10
-    display: none
+    opacity: 0
+    visibility: hidden
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out
+    &.active
+        opacity: 1
+        visibility: visible

@@ -6,12 +6,12 @@ function showBackgroundForModals() {
   for (var i = 0; i < modalsToCheck.length; i++) {
     var modal = document.querySelector("." + modalsToCheck[i]);
     if (modal && modal.classList.contains("active")) {
-      overlay.style.display = "block"; // Показываем фон и выходим из цикла
+      overlay.classList.toggle("active"); // Показываем фон и выходим из цикла
       return;
     }
   }
 
-  overlay.style.display = "none"; // Если ни одно модальное окно не активно, скрываем фон
+  overlay.classList.remove("active"); // Если ни одно модальное окно не активно, скрываем фон
 }
 // Открывает дроп меню по клику на иконку профиля на этапе не зарегистрирован
 document.addEventListener("DOMContentLoaded", function () {
@@ -41,6 +41,15 @@ document.addEventListener("DOMContentLoaded", function () {
       dropMenu.classList.remove("noauth");
     });
 
+  // Закрывает окно регистрации при клике на кнопку крест
+  document
+    .querySelector(".menuregister .modalprofile-right__close")
+    .addEventListener("click", function (event) {
+      event.stopPropagation(); // Предотвращаем всплытие события
+      document.querySelector(".menuregister").classList.remove("active");
+      showBackgroundForModals();
+    });
+
   // Открывает окно регистрации и закрывает дроп меню при клике на кнопку sign up в разделе digital library card
 
   document
@@ -52,6 +61,16 @@ document.addEventListener("DOMContentLoaded", function () {
       dropMenu.classList.remove("noauth");
     });
 
+  // Открывает окно регистрации и закрывает дроп меню при клике на ссылгу Register в модальном окне menulogin
+
+  document
+    .querySelector(".menulogin-register")
+    .addEventListener("click", function (event) {
+      event.stopPropagation(); // Предотвращаем всплытие события
+      document.querySelector(".menuregister").classList.add("active");
+      showBackgroundForModals();
+      dropMenu.classList.remove("noauth");
+    });
   // Открывает окно Логина и закрывает дроп меню при клике на заголовок "register" или "drop-options"
 
   document
@@ -63,3 +82,13 @@ document.addEventListener("DOMContentLoaded", function () {
       dropMenu.classList.remove("noauth");
     });
 });
+
+// Закрывает окно Логина при клике на кнопку крест
+
+document
+  .querySelector(".menulogin .modalprofile-right__close")
+  .addEventListener("click", function (event) {
+    event.stopPropagation(); // Предотвращаем всплытие события
+    document.querySelector(".menulogin").classList.remove("active");
+    showBackgroundForModals();
+  });
