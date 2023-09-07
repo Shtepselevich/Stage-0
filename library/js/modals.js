@@ -50,7 +50,7 @@ document.addEventListener("DOMContentLoaded", function () {
       showBackgroundForModals();
     });
 
-  // Открывает окно регистрации и закрывает дроп меню при клике на кнопку sign up в разделе digital library card
+  // Открывает окно регистрации и логина при клике на кнопку sign up и log in в разделе digital library card
 
   document
     .querySelector(".librarycard-getcard__button-signup")
@@ -58,7 +58,13 @@ document.addEventListener("DOMContentLoaded", function () {
       event.stopPropagation(); // Предотвращаем всплытие события
       document.querySelector(".menuregister").classList.add("active");
       showBackgroundForModals();
-      dropMenu.classList.remove("noauth");
+    });
+  document
+    .querySelector(".librarycard-getcard__button-login")
+    .addEventListener("click", function (event) {
+      event.stopPropagation(); // Предотвращаем всплытие события
+      document.querySelector(".menulogin").classList.add("active");
+      showBackgroundForModals();
     });
 
   // Открывает окно регистрации при клике на ссылгу Register в модальном окне menulogin
@@ -69,6 +75,7 @@ document.addEventListener("DOMContentLoaded", function () {
       event.stopPropagation(); // Предотвращаем всплытие события
       document.querySelector(".menuregister").classList.add("active");
       document.querySelector(".menulogin").classList.remove("active");
+      event.preventDefault();
     });
   // Открывает окно Логина и закрывает дроп меню при клике на заголовок "register" или "drop-options"
 
@@ -90,6 +97,7 @@ document
     event.stopPropagation(); // Предотвращаем всплытие события
     document.querySelector(".menulogin").classList.add("active");
     document.querySelector(".menuregister").classList.remove("active");
+    event.preventDefault();
   });
 
 // Закрывает окно Логина при клике на кнопку крест
