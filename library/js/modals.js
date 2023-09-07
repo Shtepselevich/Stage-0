@@ -61,15 +61,14 @@ document.addEventListener("DOMContentLoaded", function () {
       dropMenu.classList.remove("noauth");
     });
 
-  // Открывает окно регистрации и закрывает дроп меню при клике на ссылгу Register в модальном окне menulogin
+  // Открывает окно регистрации при клике на ссылгу Register в модальном окне menulogin
 
   document
-    .querySelector(".menulogin-register")
+    .querySelector(".menulogin-login")
     .addEventListener("click", function (event) {
       event.stopPropagation(); // Предотвращаем всплытие события
       document.querySelector(".menuregister").classList.add("active");
-      showBackgroundForModals();
-      dropMenu.classList.remove("noauth");
+      document.querySelector(".menulogin").classList.remove("active");
     });
   // Открывает окно Логина и закрывает дроп меню при клике на заголовок "register" или "drop-options"
 
@@ -82,6 +81,16 @@ document.addEventListener("DOMContentLoaded", function () {
       dropMenu.classList.remove("noauth");
     });
 });
+
+// Открывает окно Login при клике на ссылгу Log In в модальном окне menulogin
+
+document
+  .querySelector(".menulogin-register")
+  .addEventListener("click", function (event) {
+    event.stopPropagation(); // Предотвращаем всплытие события
+    document.querySelector(".menulogin").classList.add("active");
+    document.querySelector(".menuregister").classList.remove("active");
+  });
 
 // Закрывает окно Логина при клике на кнопку крест
 
