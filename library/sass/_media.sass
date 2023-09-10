@@ -1,14 +1,13 @@
 @media (max-width: 1439px)
     .slider
         &-wrapper
-            justify-content: center
+            max-width: 940px
+            padding-right: 0
+            padding-left: 7.5px
             &__image1
-                margin-right: 20px
+                margin-right: 12.5px
             &__image2
-                margin-left: 20px
-                margin-right: auto
-            &__image3
-                display: none
+                margin-left: 12.5px
         &-pagination
             &__button4
                 display: block
@@ -19,7 +18,7 @@
             margin: auto
             &__title
                 margin-left: auto
-        &-winter
+        &-season
             align-items: center
             flex-direction: column
             justify-content: space-between
@@ -83,15 +82,12 @@
         visibility: visible
     .slider
         &-wrapper
+            max-width: 450px
             justify-content: center
+            padding-left: 0
             padding-bottom: 20px
             &__image1
                 margin-left: 0
-                margin-right: 0
-            &__image2
-                display: none
-            &__image3
-                display: none
         &-button
             display: block
         &-pagination
@@ -110,6 +106,9 @@
         &-text
             height: 80px
             max-width: 728px
+    .slider
+        &-wrapper
+            padding-left: 0
     .favorites
         padding-left: 0
         &-radio
@@ -118,7 +117,7 @@
             margin: auto
             &__title
                 margin-left: 20px
-        &-winter
+        &-season
             margin-left: 9%
     .coffeshop
         &-info
@@ -157,7 +156,7 @@
             max-width: 150px
             margin-left: 0
     .favorites
-        &-winter
+        &-season
             margin-left: 1%
 @media (min-width: 769px)
     .navbar
@@ -173,8 +172,10 @@
                 transition: opacity 0.6s linear
     .slider
         &-pagination
-            &__button:hover
-                transform: scale(1.2)
+            &__button:hover span
+                background-color: #BB945F
+            &__button:active span
+                background-color: #BB945F
     .favorites
         &-book
             &__button:hover
