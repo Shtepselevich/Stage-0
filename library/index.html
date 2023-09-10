@@ -827,7 +827,8 @@
                            placeholder="">
                 </li>
                 <li class="menulogin-item">
-                    <button class="favorites-book__button menulogin-button">Log In</button>
+                    <button class="favorites-book__button menulogin-button"
+                            id="submit-login">Log In</button>
                 </li>
                 <li class="menulogin-item">
                     <span class="menulogin-question">Don’t have an account?</span>
@@ -837,48 +838,55 @@
             </ul>
         </div>
         <div class="menuregister">
-            <ul class="menulogin-list">
-                <li class="menulogin-item menulogin-header">
-                    <h5 class="menulogin-title menuregister-title">REGISTER</h5>
-                    <button class="modalprofile-right__close">
-                        <img src="image/icons/modal-icons/modal-close.svg"
-                             alt="Close"
-                             class="modaleprofile-right__close-icon">
-                    </button>
-                </li>
-                <li class="menulogin-item">
-                    <h6 class="menulogin-subtitle">First name</h6>
-                    <input type="text"
-                           class="menulogin-input"
-                           placeholder="">
-                </li>
-                <li class="menulogin-item">
-                    <h6 class="menulogin-subtitle">Last name</h6>
-                    <input type="text"
-                           class="menulogin-input"
-                           placeholder="">
-                </li>
-                <li class="menulogin-item">
-                    <h6 class="menulogin-subtitle">E-mail</h6>
-                    <input type="text"
-                           class="menulogin-input"
-                           placeholder="">
-                </li>
-                <li class="menulogin-item">
-                    <h6 class="menulogin-subtitle">Password</h6>
-                    <input type="number"
-                           class="menulogin-input"
-                           placeholder="">
-                </li>
-                <li class="menulogin-item">
-                    <button class="favorites-book__button menulogin-button">Sign Up</button>
-                </li>
-                <li class="menulogin-item">
-                    <span class="menulogin-question">Already have an account?</span>
-                    <a href="#"
-                       class="menulogin-register">Login</a>
-                </li>
-            </ul>
+            <form action="">
+                <ul class="menulogin-list">
+                    <li class="menulogin-item menulogin-header">
+                        <h5 class="menulogin-title menuregister-title">REGISTER</h5>
+                        <button class="modalprofile-right__close">
+                            <img src="image/icons/modal-icons/modal-close.svg"
+                                 alt="Close"
+                                 class="modaleprofile-right__close-icon">
+                        </button>
+                    </li>
+                    <li class="menulogin-item">
+                        <h6 class="menulogin-subtitle">First name</h6>
+                        <input type="text"
+                               id="firstname"
+                               class="menulogin-input"
+                               placeholder="">
+                    </li>
+                    <li class="menulogin-item">
+                        <h6 class="menulogin-subtitle">Last name</h6>
+                        <input type="text"
+                               id="lastname"
+                               class="menulogin-input"
+                               placeholder="">
+                    </li>
+                    <li class="menulogin-item">
+                        <h6 class="menulogin-subtitle">E-mail</h6>
+                        <input type="text"
+                               id="email"
+                               class="menulogin-input"
+                               placeholder="">
+                    </li>
+                    <li class="menulogin-item">
+                        <h6 class="menulogin-subtitle">Password</h6>
+                        <input type="number"
+                               id="password"
+                               class="menulogin-input"
+                               placeholder="">
+                    </li>
+                    <li class="menulogin-item">
+                        <button class="favorites-book__button menulogin-button"
+                                id="submit-signup">Sign Up</button>
+                    </li>
+                    <li class="menulogin-item">
+                        <span class="menulogin-question">Already have an account?</span>
+                        <a href="#"
+                           class="menulogin-register">Login</a>
+                    </li>
+                </ul>
+            </form>
         </div>
         <div class="buycard">
             <div class="buycard-header">

@@ -41,6 +41,14 @@ document.addEventListener("DOMContentLoaded", function () {
       dropMenu.classList.remove("noauth");
     });
 
+  // Закрывает окно регистрации по клику вне его
+  document.addEventListener("click", function (event) {
+    if (!document.querySelector(".menuregister").contains(event.target)) {
+      document.querySelector(".menuregister").classList.remove("active");
+    }
+    showBackgroundForModals();
+  });
+
   // Закрывает окно регистрации при клике на кнопку крест
   document
     .querySelector(".menuregister .modalprofile-right__close")
@@ -89,6 +97,14 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+// Закрывает окно Логина по клику вне его
+document.addEventListener("click", function (event) {
+  if (!document.querySelector(".menulogin").contains(event.target)) {
+    document.querySelector(".menulogin").classList.remove("active");
+  }
+  showBackgroundForModals();
+});
+
 // Открывает окно Login при клике на ссылгу Log In в модальном окне menulogin
 
 document
@@ -109,3 +125,30 @@ document
     document.querySelector(".menulogin").classList.remove("active");
     showBackgroundForModals();
   });
+
+// Действия для формы регистрации
+
+const firstName = document.getElementById("firstname");
+const lastName = document.getElementById("lastname");
+const email = document.getElementById("email");
+const password = document.getElementById("password");
+
+localStorage.setItem("usersFisrtname", JSON.stringify([]));
+localStorage.setItem("email", JSON.stringify([]));
+localStorage.setItem("loginStatus", false);
+
+let users = JSON.parse(localStorage.getItem("usersArray"));
+class NewUser {
+  constructor(firstname, lastname, email, password) {
+    this.firstname = firstname;
+    this.lastname = lastname;
+    this.email = email;
+    this.password = password;
+  }
+}
+
+let passRegexp = /[A-Za-z0-9.!@#$%^&*()_+=]{5, 30}/g;
+let emailRegexp = /[A-Za-z0-9.!@#$%^&*()_+=]{5, 15}/g;
+let firstnameRegexp = /[A-Za-z0-9.!@#$%^&*()_+=]{5, 30}/g;
+let lastnameRegexp = /[A-Za-z0-9.!@#$%^&*()_+=]{5, 30}/g;
+function registerNewUser() {}
