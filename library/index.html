@@ -23,9 +23,17 @@
             defer></script>
     <script src="js/burger.js"
             defer></script>
+    <script src="js/slider-about.js"
+            defer></script>
+    <script src="js/favorites-tabs.js"
+            defer></script>
+    <script src="js/modals.js"
+            defer></script>
+
 </head>
 
 <body>
+    <div class="background-overlay"></div>
     <div class="body-wrapper">
         <header class="header">
             <h1 class="title">Brooklyn Public Library</h1>
@@ -44,7 +52,8 @@
                            class="navbar-menu__link">Library Card</a></li>
                 </ul>
                 <a href="#"
-                   class="navbar-icon">
+                   class="navbar-icon"
+                   id="icon">
                     <img src="image/icons/icon-profile.svg"
                          alt="Profile">
                 </a>
@@ -52,6 +61,18 @@
                         id="burger">
                     <span></span><span></span><span></span>
                 </button>
+                <div class="drop-menu drop-noauth">
+                    <h4 class="drop-title">Profile</h4>
+                    <hr class="drop-line">
+                    <h5 class="drop-options drop-login">Log In</h5>
+                    <h5 class="drop-options drop-register">Register</h5>
+                </div>
+                <div class="drop-menu drop-auth">
+                    <h4 class="drop-title">Profile</h4>
+                    <hr class="drop-line">
+                    <h5 class="drop-options">My profile</h5>
+                    <h5 class="drop-options">Log Out</h5>
+                </div>
             </nav>
         </header>
         <main class="main">
@@ -67,31 +88,40 @@
                 <span class="about-text">The Brooklyn Library is a free workspace, a large number of books and a cozy
                     coffee
                     shop inside</span>
-                <div class="slider-wrapper">
+                <div class="slider">
                     <button class="slider-button slider-button__prev"></button>
-                    <img src="image/about/about1.png"
-                         alt="About1"
-                         class="slider-wrapper__image slider-wrapper__image1">
-                    <img src="image/about/about2.png"
-                         alt="About1"
-                         class="slider-wrapper__image slider-wrapper__image2">
-                    <img src="image/about/about3.png"
-                         alt="About1"
-                         class="slider-wrapper__image slider-wrapper__image3">
-
+                    <div class="slider-wrapper">
+                        <div class="slider-line">
+                            <img src="image/about/about1.png"
+                                 alt="About1"
+                                 class="slider-wrapper__image slider-wrapper__image1">
+                            <img src="image/about/about2.png"
+                                 alt="About1"
+                                 class="slider-wrapper__image slider-wrapper__image2">
+                            <img src="image/about/about3.png"
+                                 alt="About1"
+                                 class="slider-wrapper__image slider-wrapper__image3">
+                            <img src="image/about/about4.png"
+                                 alt="About1"
+                                 class="slider-wrapper__image slider-wrapper__image4">
+                            <img src="image/about/about5.png"
+                                 alt="About1"
+                                 class="slider-wrapper__image slider-wrapper__image5">
+                        </div>
+                    </div>
                     <button class="slider-button slider-button__next"></button>
-                </div>
-                <div class="slider-pagination">
-                    <button class="slider-pagination__button slider-pagination__button1"><span
-                              class="slider-pagination__span1"></span></button>
-                    <button class="slider-pagination__button slider-pagination__button2"><span
-                              class="slider-pagination__span2"></span></button>
-                    <button class="slider-pagination__button slider-pagination__button3"><span
-                              class="slider-pagination__span3"></span></button>
-                    <button class="slider-pagination__button slider-pagination__button4"><span
-                              class="slider-pagination__span3"></span></button>
-                    <button class="slider-pagination__button slider-pagination__button5"><span
-                              class="slider-pagination__span3"></span></button>
+                    <div class="slider-pagination">
+                        <button class="slider-pagination__button slider-pagination__button1 active"><span
+                                  class="slider-pagination__span slider-pagination__span-active"></span></button>
+                        <button class="slider-pagination__button slider-pagination__button2"><span
+                                  class="slider-pagination__span"></span></button>
+                        <button class="slider-pagination__button slider-pagination__button3"><span
+                                  class="slider-pagination__span"></span></button>
+                        <button class="slider-pagination__button slider-pagination__button4"><span
+                                  class="slider-pagination__span"></span></button>
+                        <button class="slider-pagination__button slider-pagination__button5"><span
+                                  class="slider-pagination__span"></span></button>
+                    </div>
                 </div>
             </section>
             <section id="favorites"
@@ -136,11 +166,11 @@
                                 Summer</label>
                         </div>
                         <div class="label-wrapper">
-                            <label for="autumun"
+                            <label for="autumn"
                                    class="favorites-radio__label">
                                 <input type="radio"
-                                       id="autumun"
-                                       value="autumun"
+                                       id="autumn"
+                                       value="autumn"
                                        name="season"
                                        class="favorites-radio__input">
                                 <span class="favorites-radio__custom"></span>
@@ -148,7 +178,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="favorites-winter">
+                <div id="winter"
+                     class="favorites-winter favorites-season"
+                     data-season="winter">
                     <div class="favorites-book1">
                         <div class="favorites-book-image">
                             <img src="image/books/winter/book1.png"
@@ -220,7 +252,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="favorites-spring">
+                <div id="spring"
+                     class="favorites-spring favorites-season"
+                     data-season="spring">
                     <div class="favorites-book1">
                         <div class="favorites-book-image">
                             <img src="image/books/spring/book1.png"
@@ -289,7 +323,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="favorites-summer">
+                <div id="summer"
+                     class="favorites-summer favorites-season"
+                     data-season="summer">
                     <div class="favorites-book1">
                         <div class="favorites-book-image">
                             <img src="image/books/summer/book1.png"
@@ -366,7 +402,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="favorites-autumn">
+                <div id="autumn"
+                     class="favorites-autumn favorites-season"
+                     data-season="autumn">
                     <div class="favorites-book1">
                         <div class="favorites-book-image">
                             <img src="image/books/autumn/book1.png"
@@ -548,7 +586,7 @@
                      class="librarycard">
                 <h2 class="section-title">Digital Library Cards</h2>
                 <hr class="section-line">
-                <div class="checkcard-getcard__wrapper">
+                <div class="checkcard-getcard__wrapper checkcard-getcard__beforelogin">
                     <div class="librarycard-checkcard__wrapper">
                         <h3 class="librarycard-checkcard__title">Find your Library card</h3>
                         <div class="librarycard-checkcard">
@@ -575,8 +613,78 @@
                             into
                             account or you can register a new <br>account</p>
                         <div class="librarycard-getcard__button-wrapper">
-                            <button class="librarycard-getcard__button">Sign Up</button>
-                            <button class="librarycard-getcard__button">Log in</button>
+                            <button class="librarycard-getcard__button librarycard-getcard__button-signup">Sign
+                                Up</button>
+                            <button class="librarycard-getcard__button librarycard-getcard__button-login">Log
+                                in</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="checkcard-getcard__wrapper checkcard-getcard__afterlogin">
+                    <div class="librarycard-checkcard__wrapper">
+                        <h3 class="librarycard-checkcard__title">Your Library card</h3>
+                        <div class="librarycard-checkcard">
+                            <form action="#"
+                                  class="librarycard-checkcard__form">
+                                <div class="librarycard-checkcard__formwrapper">
+                                    <h4 class="librarycard-checkcard__cardtitle">Brooklyn Public Library</h4>
+                                    <div class="librarycard-input__wrapper">
+                                        <input type="text"
+                                               class="librarycard-checkcard__input"
+                                               placeholder="Reader's name">
+                                    </div>
+                                    <input type="text"
+                                           class="librarycard-checkcard__input"
+                                           placeholder="Card number">
+                                </div>
+                                <div class="modalprofile-interactive__items-wrapper">
+                                    <div class="modalprofile-interactive__items">
+                                        <div
+                                             class="modalprofile-interactive__item modalprofile-interactive__item-afterlogin">
+                                            <h6
+                                                class="modalprofile-interactive__item-header modalprofile-interactive__item-headerafterlogin">
+                                                Visits</h6>
+                                            <img src="image/icons/modal-icons/visits.svg"
+                                                 alt="Visits"
+                                                 class="modalprofile-interactive__item-icon">
+                                            <span class="visits-counter">23</span>
+                                        </div>
+                                    </div>
+                                    <div class="modalprofile-interactive__items">
+                                        <div
+                                             class="modalprofile-interactive__item modalprofile-interactive__item-afterlogin">
+                                            <h6
+                                                class="modalprofile-interactive__item-header modalprofile-interactive__item-headerafterlogin">
+                                                Bonuses</h6>
+                                            <img src="image/icons/modal-icons/bonuses.svg"
+                                                 alt="Bonuses"
+                                                 class="modalprofile-interactive__item-icon">
+                                            <span class="visits-counter">1240</span>
+                                        </div>
+                                    </div>
+                                    <div class="modalprofile-interactive__items">
+                                        <div
+                                             class="modalprofile-interactive__item modalprofile-interactive__item-afterlogin">
+                                            <h6
+                                                class="modalprofile-interactive__item-header modalprofile-interactive__item-headerafterlogin">
+                                                Books</h6>
+                                            <img src="image/icons/modal-icons/books.svg"
+                                                 alt="Books"
+                                                 class="modalprofile-interactive__item-icon">
+                                            <span class="visits-counter">2</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="librarycard-getcard">
+                        <h4 class="librarycard-getcard__title">Visit your profile</h4>
+                        <p class="librarycard-getcard__text">With a digital library card you get free access <br>to the
+                            Library’s wide array of digital resources <br>including e-books, databases, educational <br>
+                            resources, and more.</p>
+                        <div class="librarycard-getcard__button-wrapper">
+                            <button class="librarycard-getcard__button">Profile</button>
                         </div>
                     </div>
                 </div>
@@ -625,6 +733,213 @@
                    class="footer-bot__username">Shtepselevich</a>
             </div>
         </footer>
+        <div class="modalprofile">
+            <div class="modalprofile-left">
+                <div class="modalprofile-left__initials">
+                    <h6 class="modalprofile-left__initials-header">JD</h6>
+                </div>
+                <div class="modalprofile-left__fullname">
+                    <h6 class="modalprofile-left__fullname-header">John Doe</h6>
+                </div>
+            </div>
+            <div class="modalprofile-right">
+                <ul class="modalprofile-right__list">
+                    <li class="modalprofile-right__header">
+                        <h3 class="modalprofile-right__title">My profile</h3>
+                        <button class="modalprofile-right__close">
+                            <img src="image/icons/modal-icons/modal-close.svg"
+                                 alt="Close"
+                                 class="modaleprofile-right__close-icon">
+                        </button>
+                    </li>
+                    <li class="modalprofile-interactive">
+                        <div class="modalprofile-interactive__items">
+                            <div class="modalprofile-interactive__item">
+                                <h6 class="modalprofile-interactive__item-header">Visits</h6>
+                                <img src="image/icons/modal-icons/visits.svg"
+                                     alt="Visits"
+                                     class="modalprofile-interactive__item-icon">
+                                <span class="visits-counter">23</span>
+                            </div>
+                        </div>
+                        <div class="modalprofile-interactive__items">
+                            <div class="modalprofile-interactive__item">
+                                <h6 class="modalprofile-interactive__item-header">Bonuses</h6>
+                                <img src="image/icons/modal-icons/bonuses.svg"
+                                     alt="Bonuses"
+                                     class="modalprofile-interactive__item-icon">
+                                <span class="visits-counter">1240</span>
+                            </div>
+                        </div>
+                        <div class="modalprofile-interactive__items">
+                            <div class="modalprofile-interactive__item">
+                                <h6 class="modalprofile-interactive__item-header">Books</h6>
+                                <img src="image/icons/modal-icons/books.svg"
+                                     alt="Books"
+                                     class="modalprofile-interactive__item-icon">
+                                <span class="visits-counter">2</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="modalprofile-rented">
+                        <h4 class="modalprofile-rented__header">Rented books</h4>
+                    </li>
+                    <li class="modalprofile-rented__list">
+                        <ul class="modalprofile-rented__schedule">
+                            <li class="modalprofile-rented__schedule-item">The Last Queen, Clive Irving</li>
+                            <li class="modalprofile-rented__schedule-item">Dominicana, Angie Cruz</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <div class="modalprofile-cardnumber__wrapper">
+                            <h6 class="modalprofile-cardnumber__header">Card number</h6>
+                            <span class="modalprofile-cardnumber__number">F00234030</span>
+                            <button class="modalprofile-cardnumber__copy">
+                                <img src="image/icons/modal-icons/copy.svg"
+                                     alt="Copy"
+                                     class="modalprofile-cardnumber__copy-icon">
+                            </button>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="menulogin">
+            <ul class="menulogin-list">
+                <li class="menulogin-item menulogin-header">
+                    <h5 class="menulogin-title">LOGIN</h5>
+                    <button class="modalprofile-right__close">
+                        <img src="image/icons/modal-icons/modal-close.svg"
+                             alt="Close"
+                             class="modaleprofile-right__close-icon">
+                    </button>
+                </li>
+                <li class="menulogin-item">
+                    <h6 class="menulogin-subtitle">E-mail or readers card</h6>
+                    <input type="text"
+                           class="menulogin-input"
+                           placeholder="">
+                </li>
+                <li class="menulogin-item">
+                    <h6 class="menulogin-subtitle">Password</h6>
+                    <input type="number"
+                           class="menulogin-input"
+                           placeholder="">
+                </li>
+                <li class="menulogin-item">
+                    <button class="favorites-book__button menulogin-button">Log In</button>
+                </li>
+                <li class="menulogin-item">
+                    <span class="menulogin-question">Don’t have an account?</span>
+                    <a href="#"
+                       class="menulogin-login">Register</a>
+                </li>
+            </ul>
+        </div>
+        <div class="menuregister">
+            <ul class="menulogin-list">
+                <li class="menulogin-item menulogin-header">
+                    <h5 class="menulogin-title menuregister-title">REGISTER</h5>
+                    <button class="modalprofile-right__close">
+                        <img src="image/icons/modal-icons/modal-close.svg"
+                             alt="Close"
+                             class="modaleprofile-right__close-icon">
+                    </button>
+                </li>
+                <li class="menulogin-item">
+                    <h6 class="menulogin-subtitle">First name</h6>
+                    <input type="text"
+                           class="menulogin-input"
+                           placeholder="">
+                </li>
+                <li class="menulogin-item">
+                    <h6 class="menulogin-subtitle">Last name</h6>
+                    <input type="text"
+                           class="menulogin-input"
+                           placeholder="">
+                </li>
+                <li class="menulogin-item">
+                    <h6 class="menulogin-subtitle">E-mail</h6>
+                    <input type="text"
+                           class="menulogin-input"
+                           placeholder="">
+                </li>
+                <li class="menulogin-item">
+                    <h6 class="menulogin-subtitle">Password</h6>
+                    <input type="number"
+                           class="menulogin-input"
+                           placeholder="">
+                </li>
+                <li class="menulogin-item">
+                    <button class="favorites-book__button menulogin-button">Sign Up</button>
+                </li>
+                <li class="menulogin-item">
+                    <span class="menulogin-question">Already have an account?</span>
+                    <a href="#"
+                       class="menulogin-register">Login</a>
+                </li>
+            </ul>
+        </div>
+        <div class="buycard">
+            <div class="buycard-header">
+                <h2 class="buycard-header__title">BUY A LIBRARY CARD</h2>
+                <button class="buycard-header__button">
+                    <img src="image/icons/modal-icons/close-white.svg"
+                         alt="Close"
+                         class="buycard-header__icon">
+                </button>
+            </div>
+            <div class="buycard-data">
+                <ul class="menulogin-list buycard-data__list">
+                    <li class="menulogin-item">
+                        <h6 class="menulogin-subtitle">Bank card number</h6>
+                        <input type="text"
+                               class="menulogin-input"
+                               placeholder="">
+                    </li>
+                    <li class="menulogin-item">
+                        <h6 class="menulogin-subtitle">Expiration code</h6>
+                        <input type="text"
+                               class="buycard-input"
+                               placeholder="">
+                        <input type="text"
+                               class="buycard-input"
+                               placeholder="">
+                    </li>
+                    <li class="menulogin-item">
+                        <h6 class="menulogin-subtitle">CVC</h6>
+                        <input type="text"
+                               class="buycard-input buycard-input__cvc"
+                               placeholder="">
+                    </li>
+                    <li class="menulogin-item">
+                        <h6 class="menulogin-subtitle">Cardholder name</h6>
+                        <input type="text"
+                               class="menulogin-input"
+                               placeholder="">
+                    </li>
+                    <li class="menulogin-item">
+                        <h6 class="menulogin-subtitle">Postal code</h6>
+                        <input type="text"
+                               class="menulogin-input"
+                               placeholder="">
+                    </li>
+                    <li class="menulogin-item">
+                        <h6 class="menulogin-subtitle">City / Town</h6>
+                        <input type="number"
+                               class="menulogin-input"
+                               placeholder="">
+                    </li>
+                    <li class="menulogin-item menulogin-item__buy-price">
+                        <button class="favorites-book__button menulogin-button menulogin-button__buy">Buy</button>
+                        <span class="buycard-data__price">$ 25.00</span>
+                    </li>
+                </ul>
+                <span class="buycard-data__text">If you are live, work, attend school, or pay property taxes in
+                    New York State, you can get a $25 digital library card right now using this online form.
+                    Visitors to New York State can also use this form to apply for a temporary card.</span>
+            </div>
+        </div>
     </div>
 </body>
 
