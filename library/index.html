@@ -864,17 +864,18 @@
                     </li>
                     <li class="menulogin-item">
                         <h6 class="menulogin-subtitle">E-mail</h6>
-                        <input type="text"
+                        <input type="email"
                                id="email"
                                class="menulogin-input"
-                               placeholder="">
+                               placeholder=""
+                               pattern="[A-Za-z0-9.@]{5,30}">
                     </li>
                     <li class="menulogin-item">
                         <h6 class="menulogin-subtitle">Password</h6>
-                        <input type="number"
-                               id="password"
+                        <input id="password"
                                class="menulogin-input"
-                               placeholder="">
+                               placeholder=""
+                               pattern="[A-Za-z0-9.!@#$%^&*()_+=]{5,30}">
                     </li>
                     <li class="menulogin-item">
                         <button class="favorites-book__button menulogin-button"

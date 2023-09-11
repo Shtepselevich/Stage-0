@@ -148,7 +148,7 @@ class NewUser {
 }
 
 let passRegexp = /[A-Za-z0-9.!@#$%^&*()_+=]{5, 30}/g;
-let emailRegexp = /[A-Za-z0-9.!@#$%^&*()_+=]{5, 15}/g;
-let firstnameRegexp = /[A-Za-z0-9.!@#$%^&*()_+=]{5, 30}/g;
-let lastnameRegexp = /[A-Za-z0-9.!@#$%^&*()_+=]{5, 30}/g;
+let emailRegexp = /[A-Za-z0-9.!@]{5, 15}/g;
+let firstnameRegexp = /[A-Za-z0-9]{5, 30}/g;
+let lastnameRegexp = /[A-Za-z0-9]{5, 30}/g;
 function registerNewUser() {}
