@@ -103,3 +103,21 @@ progressContainer.addEventListener("click", setProgress);
 
 //Auto play
 audio.addEventListener("ended", nextSong);
+
+//Ползунок
+const progressWrapper = document.querySelector(".progress-wrapper");
+const progressSlider = document.querySelector(".progress");
+const customSlider = document.querySelector(".custom-slider");
+
+progressWrapper.addEventListener("click", (e) => {
+  const clickX = e.clientX - progressWrapper.getBoundingClientRect().left;
+  const progressWidth = (clickX / progressWrapper.offsetWidth) * 100;
+
+  // Установите ширину прогресса и положение кастомного ползунка
+  progressSlider.style.width = `${progressWidth}%`;
+  customSlider.style.left = `${progressWidth}%`;
+
+  // Вычислите время для перемотки и установите его
+  const duration = audio.duration;
+  audio.currentTime = (progressWidth / 100) * duration;
+});
