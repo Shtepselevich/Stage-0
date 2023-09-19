@@ -11,18 +11,23 @@
     &-wrapper
         background: linear-gradient(#7c7f9b, #b1b39a)
         width: 500px
-        height: 500px
+        height: 650px
         padding: 40px
     &-icon
         width: 40px
         height: 40px
 .song-cover
-    width: 200px
-    height: 200px
+    width: 270px
+    height: 270px
 .cover
     display: flex
     justify-content: center
-    margin: 35px 0
+    margin: 55px 0
+
+    .song-cover
+        &.active
+            animation: rotateAnimation 10s linear infinite
+
 .title
     font-weight: 500
     font-size: 20px
@@ -36,24 +41,30 @@
     color: #e7e9bb
     text-align: center
 .progress-wrapper
+    margin: auto
     background: #f2f6f1
-    border-radius: 5px
-    width: 100%
+    width: 80%
     height: 8px
     margin-top: 35px
     display: flex
     align-items: center
     cursor: pointer
+    padding-left: 1px
+    padding-right: 1px
 .progress
-    background: #403b4a
-    border-radius: 5px
+    background: #7c7a80
     height: 6px
-    width: 150px
+    //width: 150px
 .buttons
     display: flex
     justify-content: space-between
     align-items: center
-    margin-top: 35px
+    width: 50%
+    margin-top: 50px
+    margin-right: auto
+    margin-left: auto
+.btn
+    cursor: pointer
 .footer
     background: linear-gradient(#403b4a, #e7e9bb)
     &-menu
@@ -70,3 +81,8 @@
         &__rs
             width: 80px
             height: 20%
+@keyframes rotateAnimation
+    0%
+        transform: rotate(0)
+    100%
+        transform: rotate(360deg)
