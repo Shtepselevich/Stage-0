@@ -58,7 +58,7 @@ img {
   margin: 55px 0;
 }
 .cover .song-cover.active {
-  animation: rotateAnimation 10s linear infinite;
+  animation: rotateAnimation 20s linear infinite;
 }
 
 .title {
