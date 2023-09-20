@@ -39,7 +39,7 @@ img {
 .player-wrapper {
   background: linear-gradient(#7c7f9b, #b1b39a);
   width: 500px;
-  height: 650px;
+  height: 771px;
   padding: 40px;
 }
 .player-icon {
@@ -55,7 +55,7 @@ img {
 .cover {
   display: flex;
   justify-content: center;
-  margin: 55px 0;
+  margin: 85px 0;
 }
 .cover .song-cover.active {
   animation: rotateAnimation 20s linear infinite;
@@ -65,7 +65,7 @@ img {
   font-weight: 500;
   font-size: 20px;
   line-height: 22px;
-  color: #f1fd0f;
+  color: #eaf069;
   text-align: center;
 }
 
@@ -73,7 +73,7 @@ img {
   font-weight: 500;
   font-size: 20px;
   line-height: 22px;
-  color: #f1fd0f;
+  color: #eaf069;
   text-align: center;
 }
 
@@ -81,25 +81,22 @@ img {
   position: relative;
   margin: auto;
   background: #f2f6f1;
-  width: 80%;
+  width: 60%;
   height: 6px;
-  margin-top: 35px;
+  margin-top: 75px;
   display: flex;
   align-items: center;
   cursor: pointer;
-  padding-left: 1px;
-  padding-right: 1px;
 }
 
 .progress {
-  background: #7c7a80;
-  height: 4px;
+  background: linear-gradient(to right, #7c7f9b, #28202c);
+  height: 6px;
 }
 .progress-slider {
   -webkit-appearance: none;
   appearance: none;
   position: absolute;
-  left: -4px;
   width: 100%;
   outline: none;
   background: transparent;
@@ -109,9 +106,9 @@ img {
   -webkit-appearance: none;
   appearance: none;
   outline: none;
-  width: 14px;
-  height: 14px;
-  background: #403b4a;
+  width: 15px;
+  height: 15px;
+  background: #28232b;
   border: none;
   transform: rotate(45deg);
 }
@@ -121,7 +118,7 @@ img {
   justify-content: space-between;
   align-items: center;
   width: 50%;
-  margin-top: 50px;
+  margin-top: 40px;
   margin-right: auto;
   margin-left: auto;
 }
@@ -154,7 +151,8 @@ img {
 .time {
   display: flex;
   justify-content: space-between;
-  width: 100%;
+  width: 80%;
+  margin-left: 10%;
 }
 
 @keyframes rotateAnimation {
