@@ -83,12 +83,37 @@ function prevSong() {
 
 prevBtn.addEventListener("click", prevSong);
 
+const progressSlider = document.querySelector(".progress-slider");
+progressSlider.value = 0;
+
+// Добавьте обработчик события loadedmetadata для установки общей длительности при загрузке аудио
+audio.addEventListener("loadedmetadata", function () {
+  const durationText = formatTime(audio.duration);
+  document.querySelector(".time-duration").textContent = durationText;
+});
+
 //Progress bar
 function updateProgress(e) {
   const { duration, currentTime } = e.srcElement;
   const progressPercent = (currentTime / duration) * 100;
   progress.style.width = `${progressPercent}%`;
+
+  // Обновляем положение ползунка
+  progressSlider.value = progressPercent;
+  // Обновляем текст общей длительности и текущего времени
+  const durationText = formatTime(duration);
+  const currentTimeText = formatTime(currentTime);
+  document.querySelector(".time-duration").textContent = durationText;
+  document.querySelector(".time-current").textContent = currentTimeText;
 }
+
+// Создайте функцию для форматирования времени
+function formatTime(time) {
+  const minutes = Math.floor(time / 60);
+  const seconds = Math.floor(time % 60);
+  return `${minutes}:${seconds < 10 ? "0" : ""}${seconds}`;
+}
+
 audio.addEventListener("timeupdate", updateProgress);
 
 //Set progress
@@ -99,7 +124,13 @@ function setProgress(e) {
 
   audio.currentTime = (clickX / width) * duration;
 }
-progressContainer.addEventListener("click", setProgress);
+
+// При изменении положения ползунка, изменяем позицию воспроизведения
+progressSlider.addEventListener("input", function () {
+  const progressPercent = this.value;
+  const duration = audio.duration;
+  audio.currentTime = (progressPercent / 100) * duration;
+});
 
 //Auto play
 audio.addEventListener("ended", nextSong);
