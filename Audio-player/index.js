@@ -105,6 +105,10 @@ function updateProgress(e) {
   const currentTimeText = formatTime(currentTime);
   document.querySelector(".time-duration").textContent = durationText;
   document.querySelector(".time-current").textContent = currentTimeText;
+  audio.onloadedmetadata = function () {
+    progressSlider.value = "0";
+    durationTimeNow.innerHTML = timeForMinAndSec(this.duration);
+  };
 }
 
 // Создайте функцию для форматирования времени
