@@ -1,0 +1,77 @@
+* {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Mulish", sans-serif;
+  font-family: "Nunito", sans-serif;
+}
+
+.container {
+  max-width: 1110px;
+  margin: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+img {
+  max-width: 100%;
+}
+
+.header {
+  background-color: #fff;
+  padding-top: 35px;
+  padding-bottom: 35px;
+}
+.header-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header-left {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+.header-left__logo {
+  margin-right: 20px;
+  fill: #5e4949;
+}
+.header-left__title {
+  font-size: 50px;
+  line-height: 35px;
+  color: #5e4949;
+}
+
+.search-input {
+  border: solid 1px #5e4949;
+  width: 220px;
+  height: 30px;
+  border-radius: 5px;
+}
+
+.footer {
+  background: linear-gradient(#5c3737, #d1c5c5);
+}
+.footer-menu {
+  list-style-type: none;
+  margin: 0;
+  padding: 30px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #fff;
+}
+.footer-menu__git {
+  width: 80px;
+  height: 20%;
+}
+.footer-menu__rs {
+  width: 80px;
+  height: 20%;
+}
