@@ -79,7 +79,7 @@ img {
 }
 
 .footer {
-  background: linear-gradient(#5e4949, #d1c5c5);
+  background: linear-gradient(to top, #5e4949, #d1c5c5);
 }
 .footer-menu {
   list-style-type: none;
@@ -97,6 +97,12 @@ img {
 .footer-menu__rs {
   width: 80px;
   height: 20%;
+}
+.footer-menu__created {
+  color: #3f2b2b;
+  font-size: 20px;
+  font-weight: 1000;
+  letter-spacing: -1px;
 }
 
 @media (max-width: 680px) {
