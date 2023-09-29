@@ -7,28 +7,28 @@ input.addEventListener("keydown", function (event) {
 async function loadImg() {
   removeImages();
 
-  const url =
+  const apiUrl =
     "https://api.unsplash.com/search/photos?query=" +
     input.value +
     "&per_page=9&client_id=1cfzsA17tpQI4OFEMGIxvNDbeP5uYoLRsYrN5sOMhxQ";
 
-  fetch(url)
+  fetch(apiUrl)
     .then((response) => {
       if (response.ok) return response.json();
       else alert(response.status);
     })
 
     .then((data) => {
-      const imageNodes = [];
+      const imageUnits = [];
       for (let i = 0; i < data.results.length; i++) {
-        imageNodes[i] = document.createElement("div");
-        imageNodes[i].className = "img";
-        imageNodes[i].style.backgroundImage =
+        imageUnits[i] = document.createElement("div");
+        imageUnits[i].className = "img";
+        imageUnits[i].style.backgroundImage =
           "url(" + data.results[i].urls.raw + ")";
-        imageNodes[i].addEventListener("dblclick", function () {
+        imageUnits[i].addEventListener("dblclick", function () {
           window.open(data.results[i].links.download, "_blank");
         });
-        images.appendChild(imageNodes[i]);
+        images.appendChild(imageUnits[i]);
       }
     });
 }
