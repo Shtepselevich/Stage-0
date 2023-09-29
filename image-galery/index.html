@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image-galery</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;700&family=Nunito:wght@400;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="index.js" defer></script>
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-top">
+                <div class="header-left">
+                    <svg class="header-left__logo" width="40" height="40" class="UP8CN" viewBox="0 0 32 32"
+                        version="1.1" aria-labelledby="unsplash-home" aria-hidden="false">
+                        <desc lang="en-US">Unsplash logo</desc>
+                        <title id="unsplash-home">Unsplash Home</title>
+                        <path d="M10 9V0h12v9H10zm12 5h10v18H0V14h10v9h12v-9z"></path>
+                    </svg>
+                    <h1 class="header-left__title">Unsplash Api</h1>
+                </div>
+                <div class="search">
+                    <a href="#" class="search-delete"><img src="img/Cross.png" alt=""
+                            class="search-icon search-icon__clean"></a>
+                    <input class="search-input" id="input" type="text" placeholder="Search..." autofocus>
+                    <a href="#" class="search-link"><img src="img/search.png" alt=""
+                            class="search-icon search-icon__find"></a>
+                    </input>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="main">
+        <div class="container-images">
+            <h3 class="info">Double click on image to save:</h3>
+            <div class="images">
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-menu">
+                <a href="https://github.com/Shtepselevich" class="footer-menu__link"><img src="img/Github.png"
+                        alt="GitHub logo" class="footer-menu__git"></a>
+                <span>
+                    <p class="footer-menu__created">Created in 2023</p>
+                </span>
+                <a href="https://rs.school/js/" class="footer-menu__link"><img src="img/Rs.png" alt="RS logo"
+                        class="footer-menu__rs"></a>
+            </div>
+
+        </div>
+    </footer>
+</body>
+
+</html>
