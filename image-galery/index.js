@@ -1,6 +1,34 @@
 const input = document.getElementById("input");
 const images = document.querySelector(".images");
 
+document.addEventListener("DOMContentLoaded", function () {
+  loadRandomImages();
+});
+
+// Функция для загрузки 9 рандомных изображений
+async function loadRandomImages() {
+  const randomApiUrl =
+    "https://api.unsplash.com/photos/random?count=9&client_id=1cfzsA17tpQI4OFEMGIxvNDbeP5uYoLRsYrN5sOMhxQ";
+
+  fetch(randomApiUrl)
+    .then((response) => {
+      if (response.ok) return response.json();
+      else alert(response.status);
+    })
+    .then((data) => {
+      const imageUnits = [];
+      for (let i = 0; i < data.length; i++) {
+        imageUnits[i] = document.createElement("div");
+        imageUnits[i].className = "img";
+        imageUnits[i].style.backgroundImage = "url(" + data[i].urls.raw + ")";
+        imageUnits[i].addEventListener("dblclick", function () {
+          window.open(data[i].links.download, "_blank");
+        });
+        images.appendChild(imageUnits[i]);
+      }
+    });
+}
+
 input.addEventListener("keydown", function (event) {
   if (event.key === "Enter") loadImg();
 });
