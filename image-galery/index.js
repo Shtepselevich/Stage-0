@@ -1,10 +1,10 @@
 const input = document.getElementById("input");
-const grid = document.getElementsByClassName("grid")[0];
+const images = document.querySelector(".images");
 
 input.addEventListener("keydown", function (event) {
   if (event.key === "Enter") loadImg();
 });
-function loadImg() {
+async function loadImg() {
   removeImages();
 
   const url =
@@ -20,18 +20,18 @@ function loadImg() {
 
     .then((data) => {
       const imageNodes = [];
-      for (let i = 0; i < data.results.lenghts; i++) {
+      for (let i = 0; i < data.results.length; i++) {
         imageNodes[i] = document.createElement("div");
         imageNodes[i].className = "img";
-        imageNodes[i].style.backgroundImg =
-          "url(" + data.results[i].url.raw + ")";
+        imageNodes[i].style.backgroundImage =
+          "url(" + data.results[i].urls.raw + ")";
         imageNodes[i].addEventListener("dblclick", function () {
           window.open(data.results[i].links.download, "_blank");
         });
-        grid.appendChild(imageNodes[i]);
+        images.appendChild(imageNodes[i]);
       }
     });
 }
-function removeImages() {
-  grid.innerHTML = "";
+async function removeImages() {
+  images.innerHTML = "";
 }
