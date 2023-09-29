@@ -80,6 +80,10 @@ body {
   box-shadow: 20px 20px 40px #261f1f;
   transition: 0.5s ease-in-out;
 }
+.search-input:not(:focus) {
+  box-shadow: none;
+  transition: 0.5s ease-in-out;
+}
 .search-icon {
   position: absolute;
   z-index: 1;
