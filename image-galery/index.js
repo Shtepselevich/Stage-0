@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
 // Функция для загрузки 9 рандомных изображений
 async function loadRandomImages() {
   const randomApiUrl =
-    "https://api.unsplash.com/photos/random?count=9&client_id=1cfzsA17tpQI4OFEMGIxvNDbeP5uYoLRsYrN5sOMhxQ";
+    "https://api.unsplash.com/photos/random?count=24&client_id=1cfzsA17tpQI4OFEMGIxvNDbeP5uYoLRsYrN5sOMhxQ";
 
   fetch(randomApiUrl)
     .then((response) => {
@@ -22,7 +22,8 @@ async function loadRandomImages() {
       for (let i = 0; i < data.length; i++) {
         imageUnits[i] = document.createElement("div");
         imageUnits[i].className = "img";
-        imageUnits[i].style.backgroundImage = "url(" + data[i].urls.raw + ")";
+        imageUnits[i].style.backgroundImage =
+          "url(" + data[i].urls.regular + ")";
         imageUnits[i].addEventListener("dblclick", function () {
           window.open(data[i].links.download, "_blank");
         });
@@ -52,7 +53,7 @@ async function loadImg() {
   const apiUrl =
     "https://api.unsplash.com/search/photos?query=" +
     input.value +
-    "&per_page=9&client_id=1cfzsA17tpQI4OFEMGIxvNDbeP5uYoLRsYrN5sOMhxQ";
+    "&per_page=24&client_id=1cfzsA17tpQI4OFEMGIxvNDbeP5uYoLRsYrN5sOMhxQ";
 
   fetch(apiUrl)
     .then((response) => {
@@ -66,7 +67,7 @@ async function loadImg() {
         imageUnits[i] = document.createElement("div");
         imageUnits[i].className = "img";
         imageUnits[i].style.backgroundImage =
-          "url(" + data.results[i].urls.raw + ")";
+          "url(" + data.results[i].urls.regular + ")";
         imageUnits[i].addEventListener("dblclick", function () {
           window.open(data.results[i].links.download, "_blank");
         });
