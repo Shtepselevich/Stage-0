@@ -77,7 +77,8 @@ body {
   padding: 0 60px;
 }
 .search-input:focus {
-  box-shadow: 10px 10px 40px #261f1f;
+  box-shadow: 20px 20px 40px #261f1f;
+  transition: 0.5s ease-in-out;
 }
 .search-icon {
   position: absolute;
@@ -153,6 +154,9 @@ body {
 }
 
 @media (max-width: 680px) {
+  .header {
+    padding: 30px 0;
+  }
   .header-top {
     flex-direction: column;
     justify-content: center;
@@ -165,5 +169,6 @@ body {
   .info {
     text-align: center;
     padding-right: 40px;
+    padding-top: 0;
   }
 }

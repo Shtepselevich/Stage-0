@@ -1,5 +1,7 @@
 const input = document.getElementById("input");
 const images = document.querySelector(".images");
+const search = document.querySelector(".search-icon__find");
+const clean = document.querySelector(".search-icon__clean");
 
 document.addEventListener("DOMContentLoaded", function () {
   loadRandomImages();
@@ -32,6 +34,18 @@ async function loadRandomImages() {
 input.addEventListener("keydown", function (event) {
   if (event.key === "Enter") loadImg();
 });
+
+search.addEventListener("click", function () {
+  if (input.value.trim() !== "") {
+    loadImg();
+  }
+});
+
+clean.addEventListener("click", function () {
+  input.value = "";
+  input.focus();
+});
+
 async function loadImg() {
   removeImages();
 
