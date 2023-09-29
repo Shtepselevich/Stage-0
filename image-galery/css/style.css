@@ -77,7 +77,7 @@ body {
   padding: 0 60px;
 }
 .search-input:focus {
-  box-shadow: 10px 10px 30px #261f1f;
+  box-shadow: 10px 10px 40px #261f1f;
 }
 .search-icon {
   position: absolute;
