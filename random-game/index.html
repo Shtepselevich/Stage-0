@@ -10,22 +10,43 @@
         href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;700&family=Nunito:wght@400;700;800&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
-    <script src="index.js"></script>
+    <script src="index.js" defer></script>
     <title>Random game</title>
 </head>
 
 <body>
     <header class="header">
         <div class="container">
-            <h1 class="header-title">Rock, Paper, Scissors...</h1>
+            <h1 class="header-title">Rock, scissors, paper...</h1>
         </div>
     </header>
     <main class="main">
         <div class="container">
-            <div class="counter-block">
-
+            <div class="main-wrapper">
+                <div class="counter-block">
+                    <div class="count count-user">0</div>
+                    <span>:</span>
+                    <div class="count count-comp">0</div>
+                </div>
+                <div class="figure-container">
+                    <div class="user-field">
+                        <button class="field rock" data-field="r"><img class="icon" src="img/stone.png" alt=""></button>
+                        <button class="field scissors" data-field="s"><img class="icon" src="img/scissors.png"
+                                alt=""></button>
+                        <button class="field paper" data-field="p"><img class="icon" src="img/paper.png"
+                                alt=""></button>
+                    </div>
+                    <div class="comp-field">
+                        <button class="field rock" data-field="r"><img class="icon" src="img/stone.png" alt=""></button>
+                        <button class="field scissors" data-field="s"><img class="icon" src="img/scissors.png"
+                                alt=""></button>
+                        <button class="field paper" data-field="p"><img class="icon" src="img/paper.png"
+                                alt=""></button>
+                    </div>
+                </div>
+                <h3 class="results">Сделайте выбор</h3>
+                <div class="buttons"><button class="play">Играть заново</button></div>
             </div>
-        </div>
     </main>
     <footer class="footer">
         <div class="container">
@@ -36,9 +57,10 @@
                 <a href="https://rs.school/js/" class="footer-menu__link"><img src="img/image.jpg" alt="RS logo"
                         class="footer-menu__rs"></a>
             </div>
-
+        </div>
         </div>
     </footer>
+    <audio src="#" class="sound"></audio>
 </body>
 
 </html>

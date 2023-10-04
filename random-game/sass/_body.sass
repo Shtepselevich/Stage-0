@@ -4,6 +4,45 @@
     &-title
         color: #fff
         text-align: center
+.main
+    height: 667px
+    &-wrapper
+        display: flex
+        flex-direction: column
+        align-items: center
+.counter-block
+    display: flex
+    margin-top: 50px
+.figure-container
+    display: flex
+    justify-content: space-between
+
+.user
+    &-field
+        display: flex
+.comp
+    &-field
+        display: flex
+        &.blink .rock
+            animation: blink 0.3s linear infinite
+        &.blink .scissors
+            animation: blink 0.3s 0.1s linear infinite
+        &.blink .paper
+            animation: blink 0.3s linear infinite
+
+.field
+    width: 50px
+    height: 50px
+    display: flex
+    border-radius: 50%
+    &:active
+        background-color: #2da83a
+    &:error
+        background-color: #da442d
+.icon
+    margin: auto
+    width: 25px
+    height: 25px
 .footer
     background-color: #000
     &-menu
