@@ -17,6 +17,15 @@ body {
   margin: auto;
 }
 
+.header {
+  padding: 30px 0;
+  background-color: #000;
+}
+.header-title {
+  color: #fff;
+  text-align: center;
+}
+
 .footer {
   background-color: #000;
 }
