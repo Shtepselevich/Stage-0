@@ -67,18 +67,19 @@ body {
   height: 50px;
   display: flex;
   border-radius: 50%;
+  background-color: #dddfa0;
 }
-.field:active {
+.field.active {
   background-color: #2da83a;
 }
-.field:error {
+.field.error {
   background-color: #da442d;
 }
 
 .icon {
   margin: auto;
-  width: 25px;
-  height: 25px;
+  width: 30px;
+  height: 30px;
 }
 
 .footer {
@@ -100,4 +101,16 @@ body {
 .footer-menu__rs {
   width: 80px;
   height: 20%;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
