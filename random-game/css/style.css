@@ -119,6 +119,10 @@ body {
   animation: blink 0.3s linear infinite;
 }
 
+.pointer {
+  cursor: pointer;
+}
+
 .button {
   margin-left: 3px;
   margin-right: 3px;
@@ -137,15 +141,17 @@ body {
 
 .icon {
   margin: auto;
-  width: 30px;
-  height: 30px;
+  width: 26px;
+  height: 26px;
 }
 
 .results {
   margin-bottom: 30px;
+  font-size: 25px;
 }
 
 .play {
+  cursor: pointer;
   width: 120px;
   height: 50px;
   font-family: "Mulish", sans-serif;
@@ -180,6 +186,26 @@ body {
   height: 20%;
 }
 
+.marquee-container {
+  overflow: hidden;
+  position: relative;
+  width: 360px;
+}
+
+.marquee {
+  width: 100%;
+  white-space: nowrap;
+  animation: marquee 6s linear infinite;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
 @keyframes blink {
   0% {
     opacity: 1;
