@@ -21,32 +21,40 @@
         </div>
     </header>
     <main class="main">
-        <div class="container">
+        <div class="container main-container">
             <div class="main-wrapper">
-                <div class="counter-block">
-                    <div class="count count-user">0</div>
-                    <span>:</span>
-                    <div class="count count-comp">0</div>
+                <div class="point-wrapper">
+                    <p class="point point-user">0</p>
+                    <p class="point">:</p>
+                    <p class="point point-cpu">0</p>
+                    <div class="player"><span class="you">You</span></div>
+                    <div class="cpu"><span class="you">Cpu</span></div>
                 </div>
-                <div class="figure-container">
-                    <div class="user-field">
-                        <button class="field rock" data-field="r"><img class="icon" src="img/stone.png" alt=""></button>
-                        <button class="field scissors" data-field="s"><img class="icon" src="img/scissors.png"
+
+                <div class="choise-wrapper">
+                    <div class="choise-user">
+                        <button class="button rock" data-field="r"><img class="icon" src="img/stone.png"
                                 alt=""></button>
-                        <button class="field paper" data-field="p"><img class="icon" src="img/paper.png"
+                        <button class="button scissors" data-field="s"><img class="icon" src="img/scissors.png"
+                                alt=""></button>
+                        <button class="button paper" data-field="p"><img class="icon" src="img/paper.png"
                                 alt=""></button>
                     </div>
-                    <div class="comp-field">
-                        <button class="field rock" data-field="r"><img class="icon" src="img/stone.png" alt=""></button>
-                        <button class="field scissors" data-field="s"><img class="icon" src="img/scissors.png"
+                    <div class="choise-cpu">
+                        <button class="button rock" data-field="r"><img class="icon" src="img/stone.png"
                                 alt=""></button>
-                        <button class="field paper" data-field="p"><img class="icon" src="img/paper.png"
+                        <button class="button scissors" data-field="s"><img class="icon" src="img/scissors.png"
+                                alt=""></button>
+                        <button class="button paper" data-field="p"><img class="icon" src="img/paper.png"
                                 alt=""></button>
                     </div>
                 </div>
-                <h3 class="results">Сделайте выбор</h3>
-                <div class="buttons"><button class="play">Играть заново</button></div>
+                <h3 class="results">Make choise</h3>
+                <div class="play-again"><button class="play">
+                        <span class="text">Play again</span>
+                    </button></div>
             </div>
+        </div>
     </main>
     <footer class="footer">
         <div class="container">

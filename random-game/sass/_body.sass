@@ -5,23 +5,63 @@
         color: #fff
         text-align: center
 .main
-    height: 667px
+    display: flex
+    align-items: center
+    flex-direction: column
+    justify-content: space-between
     &-wrapper
         display: flex
         flex-direction: column
         align-items: center
-.counter-block
-    display: flex
-    margin-top: 50px
-.figure-container
+        max-width: 480px
+        background-color: #d1cfce
+        border-radius: 30px
+        padding: 30px 30px 30px 30px
+.point-wrapper
+    padding: 30px 30px 30px 30px
     display: flex
     justify-content: space-between
+    width: 300px
+    height: 150px
+    border: 3px solid #000
+    border-radius: 20px
+    margin-bottom: 50px
+    position: relative
 
-.user
-    &-field
+.point
+    display: block
+    font-size: 50px
+    align-items: center
+    &-user
+        padding-top: 5px
+    &-cpu
+        padding-top: 5px
+.player
+    position: absolute
+    z-index: 1
+    top: 127px
+    left: 24px
+    background-color: #d1cfce
+.cpu
+    position: absolute
+    z-index: 1
+    top: 127px
+    right: 24px
+    background-color: #d1cfce
+.you
+    font-size: 25px
+    font-weight: 500
+
+.choise-wrapper
+    display: flex
+    justify-content: space-between
+    width: 376px
+    margin-bottom: 30px
+.choise
+    &-user
         display: flex
-.comp
-    &-field
+.choise
+    &-cpu
         display: flex
         &.blink .rock
             animation: blink 0.3s linear infinite
@@ -30,21 +70,35 @@
         &.blink .paper
             animation: blink 0.3s linear infinite
 
-.field
+.button
+    margin-left: 3px
+    margin-right: 3px
     width: 50px
     height: 50px
     display: flex
     border-radius: 50%
-    background-color: #dddfa0
+    background-color: #edeec9
     &.active
-        background-color: #2da83a
+        background-color: #afecb5
     &.error
-        background-color: #da442d
+        background-color: #f89e90
 .icon
     margin: auto
     width: 30px
     height: 30px
+.results
+    margin-bottom: 30px
+.play
+    width: 120px
+    height: 50px
+    font-family: 'Mulish', sans-serif
+    border-radius: 20px
+.text
+    font-size: 15px
+    font-weight: 700
 .footer
+    padding-left: 50px
+    padding-right: 50px
     background-color: #000
     &-menu
         list-style-type: none

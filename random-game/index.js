@@ -1,12 +1,12 @@
 window.addEventListener("load", function () {
-  let countUser = document.querySelector(".count-user");
-  let countComp = document.querySelector(".count-comp");
-  let userField = document.querySelector(".user-field");
-  let compField = document.querySelector(".comp-field");
+  let userPoint = document.querySelector(".point-user");
+  let cpuPoint = document.querySelector(".point-cpu");
+  let userChoise = document.querySelector(".choise-user");
+  let cpuChoise = document.querySelector(".choise-cpu");
   let sound = document.querySelector(".sound");
   let res = document.querySelector(".results");
   let play = document.querySelector(".play");
-  let fields = document.querySelectorAll(".field");
+  let buttons = document.querySelectorAll(".button");
   let userStep;
   let compStep;
   let countU = 0;
@@ -20,9 +20,9 @@ window.addEventListener("load", function () {
     if (target.classList.contains("icon")) {
       target = target.parentElement; // Получаем родительскую кнопку
     }
-    if (target.classList.contains("field")) {
+    if (target.classList.contains("button")) {
       userStep = target.dataset.field;
-      fields.forEach((item) => item.classList.remove("active", "error"));
+      buttons.forEach((item) => item.classList.remove("active", "error"));
       target.classList.add("active");
       choiceComp();
     }
@@ -30,12 +30,12 @@ window.addEventListener("load", function () {
   function choiceComp(e) {
     blocked = true;
     let rand = Math.floor(Math.random() * 3);
-    compField.classList.add("blink");
-    let compFields = compField.querySelectorAll(".field");
+    cpuChoise.classList.add("blink");
+    let cpuChoises = cpuChoise.querySelectorAll(".button");
     setTimeout(() => {
-      compField.classList.remove("blink");
-      compStep = compFields[rand].dataset.field;
-      compFields[rand].classList.add("active");
+      cpuChoise.classList.remove("blink");
+      compStep = cpuChoises[rand].dataset.field;
+      cpuChoises[rand].classList.add("active");
       winner();
     }, 3000);
     sound.setAttribute("src", "audio/choise.mp3");
@@ -62,8 +62,8 @@ window.addEventListener("load", function () {
         sound.setAttribute("src", "audio/win.mp3");
         sound.play();
         countU++;
-        countUser.innerText = countU;
-        compField
+        userPoint.innerText = countU;
+        cpuChoise
           .querySelector("[data-field=" + compStep + "]")
           .classList.add("error");
         break;
@@ -75,8 +75,8 @@ window.addEventListener("load", function () {
         sound.setAttribute("src", "audio/lose.mp3");
         sound.play();
         countC++;
-        countComp.innerText = countC;
-        userField
+        cpuPoint.innerText = countC;
+        userChoise
           .querySelector("[data-field=" + userStep + "]")
           .classList.add("error");
         break;
@@ -85,11 +85,11 @@ window.addEventListener("load", function () {
   function playGame() {
     countU = countC = 0;
     res.innerText = "Make Choise!";
-    countUser.innerText = "0";
-    countComp.innerText = "0";
-    fields.forEach((item) => item.classList.remove("active", "error"));
+    userPoint.innerText = "0";
+    cpuPoint.innerText = "0";
+    buttons.forEach((item) => item.classList.remove("active", "error"));
   }
 
   play.addEventListener("click", playGame);
-  userField.addEventListener("click", choiceUser);
+  userChoise.addEventListener("click", choiceUser);
 });

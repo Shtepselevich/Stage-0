@@ -10,10 +10,18 @@
 body {
   font-family: "Mulish", sans-serif;
   font-family: "Nunito", sans-serif;
+  min-height: 100vh;
+  background: url(../img/back.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .container {
-  max-width: 1110px;
+  max-width: 500px;
   margin: auto;
 }
 
@@ -27,53 +35,104 @@ body {
 }
 
 .main {
-  height: 667px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
 }
 .main-wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
+  max-width: 480px;
+  background-color: #d1cfce;
+  border-radius: 30px;
+  padding: 30px 30px 30px 30px;
 }
 
-.counter-block {
-  display: flex;
-  margin-top: 50px;
-}
-
-.figure-container {
+.point-wrapper {
+  padding: 30px 30px 30px 30px;
   display: flex;
   justify-content: space-between;
+  width: 300px;
+  height: 150px;
+  border: 3px solid #000;
+  border-radius: 20px;
+  margin-bottom: 50px;
+  position: relative;
 }
 
-.user-field {
+.point {
+  display: block;
+  font-size: 50px;
+  align-items: center;
+}
+.point-user {
+  padding-top: 5px;
+}
+.point-cpu {
+  padding-top: 5px;
+}
+
+.player {
+  position: absolute;
+  z-index: 1;
+  top: 127px;
+  left: 24px;
+  background-color: #d1cfce;
+}
+
+.cpu {
+  position: absolute;
+  z-index: 1;
+  top: 127px;
+  right: 24px;
+  background-color: #d1cfce;
+}
+
+.you {
+  font-size: 25px;
+  font-weight: 500;
+}
+
+.choise-wrapper {
+  display: flex;
+  justify-content: space-between;
+  width: 376px;
+  margin-bottom: 30px;
+}
+
+.choise-user {
   display: flex;
 }
 
-.comp-field {
+.choise-cpu {
   display: flex;
 }
-.comp-field.blink .rock {
+.choise-cpu.blink .rock {
   animation: blink 0.3s linear infinite;
 }
-.comp-field.blink .scissors {
+.choise-cpu.blink .scissors {
   animation: blink 0.3s 0.1s linear infinite;
 }
-.comp-field.blink .paper {
+.choise-cpu.blink .paper {
   animation: blink 0.3s linear infinite;
 }
 
-.field {
+.button {
+  margin-left: 3px;
+  margin-right: 3px;
   width: 50px;
   height: 50px;
   display: flex;
   border-radius: 50%;
-  background-color: #dddfa0;
+  background-color: #edeec9;
 }
-.field.active {
-  background-color: #2da83a;
+.button.active {
+  background-color: #afecb5;
 }
-.field.error {
-  background-color: #da442d;
+.button.error {
+  background-color: #f89e90;
 }
 
 .icon {
@@ -82,7 +141,25 @@ body {
   height: 30px;
 }
 
+.results {
+  margin-bottom: 30px;
+}
+
+.play {
+  width: 120px;
+  height: 50px;
+  font-family: "Mulish", sans-serif;
+  border-radius: 20px;
+}
+
+.text {
+  font-size: 15px;
+  font-weight: 700;
+}
+
 .footer {
+  padding-left: 50px;
+  padding-right: 50px;
   background-color: #000;
 }
 .footer-menu {
