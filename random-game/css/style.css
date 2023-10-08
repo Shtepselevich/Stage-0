@@ -1,0 +1,287 @@
+* {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Mulish", sans-serif;
+  font-family: "Nunito", sans-serif;
+  min-height: 100vh;
+  background: url(../img/back.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.container {
+  max-width: 500px;
+  margin: auto;
+}
+
+.header {
+  padding: 30px 0;
+  background-color: #000;
+}
+.header-title {
+  color: #fff;
+  text-align: center;
+}
+
+.main {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.main-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 480px;
+  background-color: #d1cfce;
+  border-radius: 30px;
+  padding: 30px 30px 30px 30px;
+}
+
+.point-wrapper {
+  padding: 30px 30px 30px 30px;
+  display: flex;
+  justify-content: space-between;
+  width: 300px;
+  height: 150px;
+  border: 3px solid #000;
+  border-radius: 20px;
+  margin-bottom: 50px;
+  position: relative;
+}
+
+.point {
+  display: block;
+  font-size: 50px;
+  align-items: center;
+}
+.point-user {
+  padding-top: 5px;
+}
+.point-cpu {
+  padding-top: 5px;
+}
+
+.player {
+  position: absolute;
+  z-index: 1;
+  top: 127px;
+  left: 24px;
+  background-color: #d1cfce;
+}
+
+.cpu {
+  position: absolute;
+  z-index: 1;
+  top: 127px;
+  right: 24px;
+  background-color: #d1cfce;
+}
+
+.you {
+  font-size: 25px;
+  font-weight: 500;
+}
+
+.choise-wrapper {
+  display: flex;
+  justify-content: space-between;
+  width: 376px;
+  margin-bottom: 30px;
+}
+
+.choise-user {
+  display: flex;
+}
+
+.choise-cpu {
+  display: flex;
+}
+.choise-cpu.blink .rock {
+  animation: blink 0.3s linear infinite;
+}
+.choise-cpu.blink .scissors {
+  animation: blink 0.3s 0.1s linear infinite;
+}
+.choise-cpu.blink .paper {
+  animation: blink 0.3s linear infinite;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.button {
+  margin-left: 3px;
+  margin-right: 3px;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  border-radius: 50%;
+  border: 2px solid #000;
+  background-color: #edeec9;
+}
+.button.active {
+  background-color: #afecb5;
+}
+.button.error {
+  background-color: #f89e90;
+}
+
+.icon {
+  margin: auto;
+  width: 26px;
+  height: 26px;
+}
+
+.results {
+  margin-bottom: 30px;
+  font-size: 25px;
+}
+
+.play {
+  cursor: pointer;
+  width: 120px;
+  height: 50px;
+  font-family: "Mulish", sans-serif;
+  border-radius: 20px;
+  border: 2px solid #000;
+}
+
+.text {
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.footer {
+  padding-left: 50px;
+  padding-right: 50px;
+  background-color: #000;
+}
+.footer-menu {
+  list-style-type: none;
+  margin: 0;
+  padding: 30px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #fff;
+}
+.footer-menu__git {
+  width: 80px;
+  height: 20%;
+}
+.footer-menu__rs {
+  width: 80px;
+  height: 20%;
+}
+
+.marquee-container {
+  overflow: hidden;
+  position: relative;
+  width: 360px;
+}
+
+.marquee {
+  width: 152px;
+  white-space: nowrap;
+  animation: marquee 6s linear infinite;
+}
+
+.score-title {
+  text-decoration: underline;
+}
+.score-button {
+  align-self: flex-end;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  margin-bottom: 20px;
+  margin-right: 40px;
+}
+.score-wrapper {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  z-index: 3;
+  background-color: #eeebeb;
+  width: 300px;
+  height: 160px;
+  top: 29.8%;
+  border-radius: 18px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+}
+.score-wrapper.active {
+  opacity: 1;
+  visibility: visible;
+}
+.score-table {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: 160px;
+  list-style-type: none;
+  padding-left: 15px;
+  padding-top: 8px;
+}
+
+.score-table > * {
+  margin-bottom: 8px;
+  margin-right: 20px;
+}
+
+.score-table li {
+  font-weight: bold;
+}
+
+.score-number {
+  font-weight: normal;
+}
+
+.close {
+  display: flex;
+  float: right;
+  margin-top: 5px;
+  margin-right: 5px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+.close-btn {
+  width: 25px;
+  height: 25px;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(233%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
