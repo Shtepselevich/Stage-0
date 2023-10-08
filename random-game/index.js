@@ -92,4 +92,28 @@ window.addEventListener("load", function () {
 
   play.addEventListener("click", playGame);
   userChoise.addEventListener("click", choiceUser);
+
+  const scoreButton = document.querySelector(".score-button");
+  const scoreWrapper = document.querySelector(".score-wrapper");
+  const closeButton = document.querySelector(".close-btn");
+
+  scoreButton.addEventListener("click", function (e) {
+    e.stopPropagation(); // Предотвращаем всплытие события
+    scoreWrapper.classList.add("active");
+  });
+
+  closeButton.addEventListener("click", function (e) {
+    e.stopPropagation(); // Предотвращаем всплытие события
+    scoreWrapper.classList.remove("active");
+  });
+
+  document.addEventListener("click", function (event) {
+    if (
+      scoreWrapper.classList.contains("active") &&
+      event.target !== scoreButton &&
+      !scoreWrapper.contains(event.target)
+    ) {
+      scoreWrapper.classList.remove("active");
+    }
+  });
 });
