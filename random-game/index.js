@@ -117,3 +117,58 @@ window.addEventListener("load", function () {
     }
   });
 });
+
+// Загрузка результатов из Local Storage
+function loadResultsFromLocalStorage() {
+  const results = JSON.parse(localStorage.getItem("gameResults")) || [];
+  const scoreTable = document.querySelector(".score-table");
+  scoreTable.innerHTML = ""; // Очищаем таблицу перед обновлением
+  results.forEach((result, index) => {
+    const listItem = document.createElement("li");
+    listItem.innerHTML = `<span class="score-number">${index + 1}.</span> ${
+      result.userPoint
+    } : ${result.compPoint}`;
+    scoreTable.appendChild(listItem);
+  });
+}
+
+// Сохранение результатов в Local Storage
+function saveResultsToLocalStorage(results) {
+  localStorage.setItem("gameResults", JSON.stringify(results));
+}
+
+// Обработчик события нажатия на кнопку "Play again"
+document.querySelector(".play").addEventListener("click", function () {
+  const userPoint = parseInt(document.querySelector(".point-user").textContent);
+  const cpuPoint = parseInt(document.querySelector(".point-cpu").textContent);
+  const gameResult = `${userPoint} : ${cpuPoint}`;
+  const results = JSON.parse(localStorage.getItem("gameResults")) || [];
+
+  results.unshift({ userPoint, compPoint: cpuPoint });
+  if (results.length > 10) {
+    results.pop();
+  }
+
+  saveResultsToLocalStorage(results);
+  loadResultsFromLocalStorage();
+});
+
+// Загружаем результаты из Local Storage при загрузке страницы
+window.addEventListener("load", function () {
+  loadResultsFromLocalStorage();
+});
+
+// Сохраняем результаты при обновлении или закрытии страницы
+window.addEventListener("beforeunload", function () {
+  const userPoint = parseInt(document.querySelector(".point-user").textContent);
+  const cpuPoint = parseInt(document.querySelector(".point-cpu").textContent);
+  const gameResult = `${userPoint} : ${cpuPoint}`;
+  const results = JSON.parse(localStorage.getItem("gameResults")) || [];
+
+  results.unshift({ userPoint, compPoint: cpuPoint });
+  if (results.length > 10) {
+    results.pop();
+  }
+
+  saveResultsToLocalStorage(results);
+});
