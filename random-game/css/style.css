@@ -130,6 +130,7 @@ body {
   height: 50px;
   display: flex;
   border-radius: 50%;
+  border: 2px solid #000;
   background-color: #edeec9;
 }
 .button.active {
@@ -156,6 +157,7 @@ body {
   height: 50px;
   font-family: "Mulish", sans-serif;
   border-radius: 20px;
+  border: 2px solid #000;
 }
 
 .text {
@@ -193,14 +195,14 @@ body {
 }
 
 .marquee {
-  width: 100%;
+  width: 152px;
   white-space: nowrap;
   animation: marquee 6s linear infinite;
 }
 
 @keyframes marquee {
   0% {
-    transform: translateX(100%);
+    transform: translateX(233%);
   }
   100% {
     transform: translateX(-100%);
