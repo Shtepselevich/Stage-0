@@ -58,7 +58,6 @@ body {
   height: 150px;
   border: 3px solid #000;
   border-radius: 20px;
-  margin-bottom: 50px;
   position: relative;
 }
 
@@ -202,6 +201,7 @@ body {
 
 .score-title {
   text-decoration: underline;
+  font-family: "Nunito", sans-serif;
 }
 .score-button {
   align-self: flex-end;
@@ -265,6 +265,11 @@ body {
 .close-btn {
   width: 25px;
   height: 25px;
+}
+
+.info-wrapper {
+  margin-top: 25px;
+  margin-bottom: 20px;
 }
 
 @keyframes marquee {
