@@ -191,6 +191,7 @@ body {
   overflow: hidden;
   position: relative;
   width: 360px;
+  margin-top: 35px;
 }
 
 .marquee {
@@ -268,7 +269,6 @@ body {
 }
 
 .info-wrapper {
-  margin-top: 25px;
   margin-bottom: 20px;
 }
 
