@@ -11,6 +11,7 @@ window.addEventListener("load", function () {
   let compStep;
   let countU = 0;
   let countC = 0;
+  let maxPoints = 3;
   blocked = false;
 
   function choiceUser(e) {
@@ -81,16 +82,38 @@ window.addEventListener("load", function () {
           .classList.add("error");
         break;
     }
+
+    // Проверяем, достигла ли одна из сторон максимального количества очков
+    if (countU === maxPoints) {
+      sound.setAttribute("src", "audio/game-won.mp3");
+      sound.play();
+      res.innerText = "Congratulations! You won the game!";
+      play.classList.add("blinking");
+      blocked = true; // Блокируем возможность выбора
+    } else if (countC === maxPoints) {
+      sound.setAttribute("src", "audio/game-over.mp3");
+      sound.play();
+      res.innerText = "Game over. You lose the game.";
+      play.classList.add("blinking");
+      blocked = true; // Блокируем возможность выбора
+    }
   }
+
   function playGame() {
     countU = countC = 0;
     res.innerText = "Make Choise!";
     userPoint.innerText = "0";
     cpuPoint.innerText = "0";
     buttons.forEach((item) => item.classList.remove("active", "error"));
+    blocked = false; // Разблокируем возможность выбора
   }
 
-  play.addEventListener("click", playGame);
+  play.addEventListener("click", function () {
+    // Останавливаем анимацию
+    play.classList.remove("blinking");
+    // Запускаем новую игру
+    playGame();
+  });
   userChoise.addEventListener("click", choiceUser);
 
   const scoreButton = document.querySelector(".score-button");
