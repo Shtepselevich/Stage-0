@@ -88,11 +88,13 @@ window.addEventListener("load", function () {
       sound.setAttribute("src", "audio/game-won.mp3");
       sound.play();
       res.innerText = "Congratulations! You won the game!";
+      play.classList.add("blinking");
       blocked = true; // Блокируем возможность выбора
     } else if (countC === maxPoints) {
       sound.setAttribute("src", "audio/game-over.mp3");
       sound.play();
       res.innerText = "Game over. You lose the game.";
+      play.classList.add("blinking");
       blocked = true; // Блокируем возможность выбора
     }
   }
@@ -105,15 +107,13 @@ window.addEventListener("load", function () {
     buttons.forEach((item) => item.classList.remove("active", "error"));
     blocked = false; // Разблокируем возможность выбора
   }
-  function playGame() {
-    countU = countC = 0;
-    res.innerText = "Make Choise!";
-    userPoint.innerText = "0";
-    cpuPoint.innerText = "0";
-    buttons.forEach((item) => item.classList.remove("active", "error"));
-  }
 
-  play.addEventListener("click", playGame);
+  play.addEventListener("click", function () {
+    // Останавливаем анимацию
+    play.classList.remove("blinking");
+    // Запускаем новую игру
+    playGame();
+  });
   userChoise.addEventListener("click", choiceUser);
 
   const scoreButton = document.querySelector(".score-button");
