@@ -12,7 +12,8 @@ window.addEventListener("load", function () {
   let countU = 0;
   let countC = 0;
   let maxPoints = 3;
-  blocked = false;
+  let maxPointsReached = false;
+  let blocked = false;
 
   function choiceUser(e) {
     if (blocked) return;
@@ -90,12 +91,16 @@ window.addEventListener("load", function () {
       res.innerText = "Congratulations! You won the game!";
       play.classList.add("blinking");
       blocked = true; // Блокируем возможность выбора
+      maxPointsReached = true;
+      saveResultsToLocalStorage();
     } else if (countC === maxPoints) {
       sound.setAttribute("src", "audio/game-over.mp3");
       sound.play();
       res.innerText = "Game over. You lose the game.";
       play.classList.add("blinking");
       blocked = true; // Блокируем возможность выбора
+      maxPointsReached = true;
+      saveResultsToLocalStorage();
     }
   }
 
@@ -162,18 +167,32 @@ function saveResultsToLocalStorage(results) {
 
 // Обработчик события нажатия на кнопку "Play again"
 document.querySelector(".play").addEventListener("click", function () {
-  const userPoint = parseInt(document.querySelector(".point-user").textContent);
-  const cpuPoint = parseInt(document.querySelector(".point-cpu").textContent);
-  const gameResult = `${userPoint} : ${cpuPoint}`;
-  const results = JSON.parse(localStorage.getItem("gameResults")) || [];
+  if (!maxPointsReached) {
+    const userPoint = parseInt(
+      document.querySelector(".point-user").textContent
+    );
+    const cpuPoint = parseInt(document.querySelector(".point-cpu").textContent);
+    const gameResult = `${userPoint} : ${cpuPoint}`;
+    const results = JSON.parse(localStorage.getItem("gameResults")) || [];
 
-  results.unshift({ userPoint, compPoint: cpuPoint });
-  if (results.length > 10) {
-    results.pop();
+    results.unshift({ userPoint, compPoint: cpuPoint });
+    if (results.length > 10) {
+      results.pop();
+    }
+
+    saveResultsToLocalStorage(results);
+    loadResultsFromLocalStorage();
   }
 
-  saveResultsToLocalStorage(results);
-  loadResultsFromLocalStorage();
+  if (maxPointsReached) {
+    playGame();
+    maxPointsReached = false;
+  } else {
+    // Останавливаем анимацию
+    play.classList.remove("blinking");
+    // Запускаем новую игру
+    playGame();
+  }
 });
 
 // Загружаем результаты из Local Storage при загрузке страницы
@@ -182,7 +201,12 @@ window.addEventListener("load", function () {
 });
 
 // Сохраняем результаты при обновлении или закрытии страницы
-window.addEventListener("beforeunload", function () {
+window.addEventListener("beforeunload", function (e) {
+  if (maxPointsReached) {
+    // Если одна из сторон набрала 3 очка, не сохраняем результаты.
+    return;
+  }
+
   const userPoint = parseInt(document.querySelector(".point-user").textContent);
   const cpuPoint = parseInt(document.querySelector(".point-cpu").textContent);
   const gameResult = `${userPoint} : ${cpuPoint}`;
@@ -195,3 +219,19 @@ window.addEventListener("beforeunload", function () {
 
   saveResultsToLocalStorage(results);
 });
+
+function saveResultsToLocalStorage() {
+  const userPoint = parseInt(document.querySelector(".point-user").textContent);
+  const cpuPoint = parseInt(document.querySelector(".point-cpu").textContent);
+  const gameResult = `${userPoint} : ${cpuPoint}`;
+  const results = JSON.parse(localStorage.getItem("gameResults")) || [];
+
+  results.unshift({ userPoint, compPoint: cpuPoint });
+  if (results.length > 10) {
+    results.pop();
+  }
+
+  localStorage.setItem("gameResults", JSON.stringify(results));
+
+  loadResultsFromLocalStorage();
+}
